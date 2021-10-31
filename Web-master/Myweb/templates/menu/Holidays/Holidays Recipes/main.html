@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Holiday Recipes{% endblock %}
+
+{% block css %}{% static '/css/holiday.css' %}{% endblock %}
+
+<!-- Begin content -->
+{% block content %}
+<div id="content">
+    <div id="header1">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2021-10-13-at-2-54-45-pm-1634151301.png?crop=0.521xw:1.00xh;0.225xw,0&resize=980:*&keepGifs=1" alt="">
+        <h1>HOLIDAYS</h1>
+    </div>
+    <br>
+    <div id="info">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190919-oozy-screamsicle-milkshakes-0222-landscape-pf-1571783533.jpg?crop=0.580xw:0.870xh;0.0529xw,0.0529xh&resize=360:*" alt="">
+                    <h2>Boozy Screamsicle Shakes</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190903-drunken-peanut-butter-cups-0136-landscape-pf-1568403639.jpg?crop=0.622xw:0.933xh;0.106xw,0.0192xh&resize=360:*" alt="">
+                    <h2>Drunken Peanut Butter Cups</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/poison-apple-cocktail-horizontal-1539985573.jpg?crop=0.667xw:1.00xh;0.0422xw,0&resize=360:*" alt="">
+                    <h2>45 Spooktacular Halloween Cocktails</h2>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="paper">
+        <div id="left">
+            <ul>
+                <li>
+                    <a href="{% url 'Tet_Nguyen_Dan' %}">
+                    <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/12/tet-nguyen-dan.png" alt="">
+                    <h2>Tết nguyên đán</h2>
+                    </a>
+                    <p>Mâm cỗ những ngày Tết cũng cần phải được chuẩn bị vô cùng thịnh soạn, đầy đủ. Không chỉ thể hiện cho sự no ấm, hạnh phúc mà còn mong ước có một năm mới đầy đủ và phát đạt.</p> 
+                    
+                </li>
+                <li>
+                    <a href="{% url 'Tet_Nguyen_Dan' %}">
+                    <img src="http://cdn.thaibinhtv.vn/upload/news/46008_tet_doan_ngo_net_dep_van_hoa.jpg" alt="">
+                    <h2>Tết đoan ngọ</h2>
+                    </a>
+                    <p>Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5 Âm lịch hằng năm. Đây chính là ngày phát động bắt sâu bọ, tiêu diệt bớt các loài sâu bệnh gây hại cho cây trồng.</p>
+                </li>
+                <li>
+                    <a href="{% url 'Tet_Nguyen_Dan' %}">
+                        <img src="http://nepcamduongsinh.com/kcfinder/upload/images/sua-chua-nep-cam-18.jpg" alt="">
+                        <h2>Tết trung thu</h2>
+                    </a>
+                    <p>Được tổ chức vào ngày 15/8 âm lịch. Đây là lễ hội lớn nhất cho thiếu nhi và cũng là một trong những ngày Tết đoàn viên của nhiều gia đình. Vào thời điểm trăng lên cao, trẻ em sẽ dùng lồng đèn, vừa múa hát vừa ngắm trăng phá cỗ. Sau đó cả gia đình sẽ cùng nhau dùng bánh trung thu bên cạnh tách trà nóng.</p> 
+                </li>
+                <li>
+                    <a href="{% url 'Tet_Nguyen_Dan' %}">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/Untitled-4-1200x676-3.jpg" alt="">
+                    <h2>Ngày Giáng sinh</h2>
+                    </a>
+                    <p>Lễ Giáng sinh ở Việt Nam trong những năm gần đây đã trở nên rất phổ biến. Hầu như ngày lễ Giáng sinh đã dàn trở thành ngày lễ chung chứ không còn là 1 ngày lễ dành riêng cho những người theo đạo thiên chúa giáo nữa</p> 
+                </li>
+                <li>
+                    <a href="{% url 'Tet_Nguyen_Dan' %}">
+                    <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/10/Halloween.jpg" alt="">
+                    <h2>Ngày Halloween</h2>
+                    </a>
+                    <p>Lễ hội được xem như một ngày tết và là lễ hội vui nhất trong năm bởi những trò chơi và hóa trang vô cùng kỳ bí và hấp dẫn. Trong những ngày diễn ra lễ hội, nhà nhà trang trí những hình nộm phù thủy, mèo đen, bí ngô lập lòe ma quái; người người tìm cho mình những trang phục gây ấn tượng mạnh trong đêm hội hóa trang.</p> 
+                </li>
+            </ul>
+        </div>
+        <div id="right"></div>
+    </div>
+
+</div>
+{% endblock %}
+
+
+<!-- End content -->

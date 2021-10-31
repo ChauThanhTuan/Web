@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+#main {
+    height: 2700px;
+}
+#content {
+    width: 80%;
+    top: 40px;
+    left: 150px;
+    height: auto;
+    position: relative;
+}
+#content #header1 {
+    align-items: center;
+}
+#content #header1 img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 350px;
+
+}
+#content #header1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: rgb(0, 0, 0);
+    z-index: 1;
+    animation: reveal 1s reverse forwards;
+    animation-delay: 2s;
+    transform-origin: right;
+}
+@keyframes reveal{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+#content #header1 h1 {
+    position: absolute;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    font-family:courier,arial,helvetica;
+    background: rgb(255, 255, 255);
+    top: 200px;
+    left: 100px;
+    text-decoration: underline;
+}
+
+#content #info {
+    width: 100%;
+    float: left;
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+#content #info ul {
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+}
+
+#content #info ul li {
+    list-style: none;
+    float: left;
+}
+
+#content #info ul li a {
+    text-decoration: none;
+}
+
+#content #info ul li a img {
+    width: 360px;
+    height: 400px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px rgb(8, 240, 220);
+}
+
+#content #info ul li a h2 {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+    color: black;
+}
+
+#content #paper #left {
+    width: 1200px;
+    float: left;
+    min-height: 400px;
+}
+
+
+#content #paper #left ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#content #paper #left ul li {
+    list-style: none;
+    margin-bottom: 100px;
+    clear: left;
+    border-bottom: 2px solid #000000;
+}
+
+#content #paper #left ul li img {
+    width: 400px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+}
+#content #paper #left ul li h2 {
+    font-size: 25px;
+    color: red;
+    padding: 50px 10px 30px 20px;
+
+}
+#content #paper #left ul li a {
+    text-decoration: none;
+}
+
+#content #paper #left ul li p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+

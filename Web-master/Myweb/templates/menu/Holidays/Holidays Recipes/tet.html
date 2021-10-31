@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Lunar New Year{% endblock %}
+
+{% block css %}{% static '/css/holpaper.css' %}{% endblock %}
+
+<!-- Begin navbar -->
+{% block navbar %}
+<div id="navbar">
+    <ul>
+        <li>
+            <a href="">Home</a>
+            <i class="fas fa-angle-right"></i>
+        </li>
+
+        <li>
+            <a href="">Holiday</a>
+            <i class="fas fa-angle-right"></i>
+        </li>
+
+        <li>
+            <a href="">Holiday Recipes</a>
+            <i class="fas fa-angle-right"></i>
+        </li>
+
+        <li>
+            <a href="">Lunar New Year</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+<!-- End navbar -->
+
+<!-- Begin content -->
+{% block content %}
+<div id="content">
+    <h1 style="margin: 100px;">Tết Nguyên Đán – Tết cổ truyền của dân tộc Việt Nam</h1>
+</div>
+
+{% endblock %}
+<!-- End content -->
