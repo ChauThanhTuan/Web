@@ -5,9 +5,10 @@ urlpatterns = [
     #Home
     path('', views.homeView, name='home'),
 
-    #Register and Login
+    #Register and Login and About
     path('/register', views.register_view, name='register'),
     path('/login', views.login_view, name='login'),
+    path('/about', views.about_view, name='about'),
 
     #Begin main page
     path('menu/HealthyMealPlans/WeightLossMealPlans/main.html', views.HealthyMealPlans_WeightLossMealPlans_view, name='HealthyMealPlans_WeightLoss'),
@@ -34,9 +35,12 @@ urlpatterns = [
     path('menu/HealthyMealPlans/VeganMealPlans/id4.html', views.HealthyMealPlans_VeganMealPlans_id4_view, name='HealthyMealPlans_Vegan_id4'),
     #End Vegan Meal Plans
 
-     #Begin Holiday Plans
+    #Begin Holiday Plans
     path('menu/Holidays/Holidays Recipes/main.html', views.Holiday_Recipes_View, name='Holiday_Recipes'),
     
     #Begin Holiday Recipes
     path('menu/Holidays/Holidays Recipes/tet.html', views.Holiday_Recipes_tetND_View, name='Tet_Nguyen_Dan'),
+
+    #Begin Special Diets
+    path('menu/SpecialDiets/main.html', views.Special_Diets_View, name='Special_Diets'),
 ]

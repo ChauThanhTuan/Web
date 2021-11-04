@@ -42,7 +42,7 @@
         
                         <ul class="header__text">
                             <li> <a class="active" href="/">Home</a> </li>
-                            <li> <a href="/#About">About</a> </li>
+                            <li> <a href="{% url 'about' %}">About</a> </li>
                             <li> <a href="/#Service">Service</a> </li>
                             <li> <a href="/#Contact">Contact</a> </li>
                             <li id="nav-menu"> <a href="#">Menu</a> </li>
@@ -192,6 +192,7 @@
 
                         <div id="SpecialDiets" class="hidden">
                             <ul>
+                                <li><a href="{% url 'Special_Diets' %}">Overall</a></li>
                                 <li><a href="">Weight Loss</a></li>
                                 <li><a href="">Vegan Diet </a></li>
                                 <li><a href="">Diabetes Diet </a></li>

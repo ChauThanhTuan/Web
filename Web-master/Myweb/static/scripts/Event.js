@@ -18,6 +18,7 @@ menuIcon.onclick = function() {
     body.style.backgroundColor = "#ccc";
 }
 
+
 for (var mealplansType of mealplansTypes) {
     mealplansType.onclick = function() {
         for (var subOption of subOptions) {

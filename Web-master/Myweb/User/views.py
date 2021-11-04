@@ -16,6 +16,9 @@ def register_view(request):
 def login_view(request):
     return render(request, 'login.html',)
 
+def about_view(request):
+    return render(request,'about.html')
+
 #Begin main page
 def HealthyMealPlans_WeightLossMealPlans_view(request):
     return render(request, 'menu/HealthyMealPlans/WeightLossMealPlans/main.html',)
@@ -76,3 +79,7 @@ def Holiday_Recipes_View(request):
 
 def Holiday_Recipes_tetND_View(request):
     return render(request,'menu/Holidays/Holidays Recipes/tet.html')
+
+#Begin Special Diets
+def Special_Diets_View(request):
+    return render(request,'menu/SpecialDiets/main.html')

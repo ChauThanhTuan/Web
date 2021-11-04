@@ -4,10 +4,13 @@
 
 {% block title %}Vegan Meals Plans{% endblock %}
 
-{% block css %}{% static '/css/MealPlans.css' %}{% endblock %}
+{% block css %}{% static '/css/VeganMealPlans.css' %}{% endblock %}
 
 <!-- Begin content -->
 {% block content %}
+<div id="header1">
+    <h1>Vegan Meal Plans</h1>
+</div>
 <div id="content">
     <ul id="plans">
         <li><a id="1" href="{% url 'HealthyMealPlans_Vegan_id1' %}">
