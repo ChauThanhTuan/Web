@@ -151,7 +151,7 @@ body {
 	width: 100%;
 	display: none;
 	position: fixed;
-	z-index: 10;
+	z-index: 1000;
 	top: 0;
 	left: 0;
 	background-color: rgb(0,0,0);
@@ -533,11 +533,10 @@ body {
 :root {
 	--white-color: #16afaf;
 }
-footer{
-	position: absolute;
-	bottom: 0;
-}
+
 .footer-distributed{
+    position: absolute;
+	bottom: 0;
 	z-index: -1;
 	/*background-color: #292c2f;*/
 	/*background-color: #e3dcdc;*/

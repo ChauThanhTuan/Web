@@ -102,9 +102,9 @@ video.lazyloading {
     clear: left;
 }
 
-#team .footer-items .items p, i {
+#team .footer-items .items p {
     margin-top: 5px;
     font-size: 15px;
-    color: rgb(87, 2, 2);
+    color: rgb(109, 8, 8);
     clear: left;
 }
