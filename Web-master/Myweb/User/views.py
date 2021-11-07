@@ -83,3 +83,7 @@ def Holiday_Recipes_tetND_View(request):
 #Begin Special Diets
 def Special_Diets_View(request):
     return render(request,'menu/SpecialDiets/main.html')
+
+#Begin Food News
+def Food_News_View(request):
+    return render(request,'menu/FoodNews/main.html')

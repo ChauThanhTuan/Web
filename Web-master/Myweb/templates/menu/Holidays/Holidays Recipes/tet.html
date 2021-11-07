@@ -1,43 +1,433 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar New Year</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-xxl">
+            <a href="#intro" class="navbar-brand">
+                <span class="fw-bold text-secondary">
+                    <i class="bi bi-book-half">Holiday - Tết Nguyên Đán</i>
+                </span>
+            </a>
+            <!-- toggle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-{% load static %}
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'about' %}" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="nav-link">Register</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a href="#" class="nav-link">Subscribe</a>
+                    </li>
+                    <li class="nav-item ms-2 d-none d-md-inline">
+                        <a href="#" class="btn btn-secondary">Subscribe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-{% block title %}Lunar New Year{% endblock %}
+    <!-- main image & intro text -->
+    <section id="intro">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <h1>
+                        <div class="display-3 shadow-lg border-dark">TẾT NGUYÊN ĐÁN</div>
+                    </h1>
+                    <p class="lead my-4 text-muted">Ngày tết đầu xuân là ngày gia đình đoàn viên, tận hưởng tiết trời se se lạnh và cùng nhau ăn những món ăn bên gia đình</p>
+                </div>
+                <div class="col-md-5 text-center d-none d-md-block">
+                    <img class="img-fluid" src="https://anhdep123.com/wp-content/uploads/2020/05/h%C3%ACnh-%E1%BA%A3nh-ch%C3%BAc-m%E1%BB%ABng-n%C4%83m-m%E1%BB%9Bi.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% block css %}{% static '/css/holpaper.css' %}{% endblock %}
 
-<!-- Begin navbar -->
-{% block navbar %}
-<div id="navbar">
-    <ul>
-        <li>
-            <a href="">Home</a>
-            <i class="fas fa-angle-right"></i>
-        </li>
+    <section id="food" class="bg-light mt-5">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Món ăn tiêu biểu</h2>
+            </div>
+            <div class="row my-5 align-items-center justify-content-center">
+                <div class="col-8 col-lg-4 col-xl-3">
+                    <div class="card border-0">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Dưa món</h4>
+                            <p class="lead card-subtitle">Món ăn kèm ngày tết</p>
+                            <img src="https://image.cooky.vn/recipe/g1/1221/s640/cooky-recipe-cover-r1221.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
 
-        <li>
-            <a href="">Holiday</a>
-            <i class="fas fa-angle-right"></i>
-        </li>
+                <div class="col-9 col-lg-4">
+                    <div class="card border-primary border-2">
+                        <div class="card-header text-center text-primary">Most Popular
+                            <div class="card-body text-center py-5">
+                                <h4 class="card-title">Bánh chưng</h4>
+                                <p class="lead card-subtitle">"Bánh chưng xanh bên dưa hấu đỏ""</p>
+                                <img class="img-fluid" src="https://cdn.tgdd.vn/2020/08/CookProduct/37-1200x676.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <li>
-            <a href="">Holiday Recipes</a>
-            <i class="fas fa-angle-right"></i>
-        </li>
+                <div class="col-8 col-lg-4 col-xl-3">
+                    <div class="card border-0">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Gà luộc</h4>
+                            <p class="lead card-subtitle">Món ăn truyền thống</p>
+                            <img src="https://daubepgiadinh.vn/wp-content/uploads/2018/05/cach-luoc-ga-ngon-nhat.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <li>
-            <a href="">Lunar New Year</a>
-        </li>
-    </ul>
-</div>
-{% endblock %}
-<!-- End navbar -->
+    <!-- topics at a glance -->
+    <section id="topics">
+        <div class="container-md">
+            <div class="text-center">
+                <h2>Các món ăn khác</h2>
+                <p class="lead text-muted">Tổng hợp 3 miền</p>
+            </div>
+            <div class="row my-5 g-5 justify-content-around align-items-center">
+                <div class="col-6 col-lg-4">
+                    <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/12/mam-co-ngay-tet-truyen-thong-Viet-Nam.png" alt="food_tet" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                <!-- accordion -->
+                    <div class="accordion" id="chapters">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                                    Ẩm thực miền Bắc
+                                </button>
+                            </h2>
+                            <div id="chapter-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#chapters"> 
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div 
+                                        class="fw-bold">Xôi gấc</div>
+                                        Màu đỏ tượng trưng cho sự may mắn cũng như hạnh phúc của lứa đôi
+                                      </div>
+                                      <img class="img-fluid w-25 h-25" src="https://wikiohana.net/wp-content/uploads/2019/05/cach-nau-xoi-gac.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Thịt đông</div>
+                                        Món ăn tinh túy, độc đáo, phù hợp với tiết trời mùa xuân miền Bắc
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://cdn.tgdd.vn/2020/08/CookProduct/Untitled-1-1200x676-9.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Giò</div>
+                                        Ngụ ý "trong ấm ngoài êm, phúc lộc đầy nhà"
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://cdn.tgdd.vn/2020/08/CookProduct/12-1200x676.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Dưa hành</div>
+                                          Món ăn giải ngấy, gợi khẩu vị trong mâm cơm đầu năm
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://meta.vn/Data/image/2020/11/10/cach-muoi-dua-hanh-tet-al.jpg" alt="">
+                                      </li>
+                                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Chè kho</div>
+                                          Nhâm nhi cùng trà nóng khi tiết trành lành lạnh dịp Tết
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://ameovat.com/wp-content/uploads/2017/05/cach-nau-che-kho-6-600x373.jpg" alt="">
+                                      </li>
+                                  </ol>
+                            </div>
+                        </div>
 
-<!-- Begin content -->
-{% block content %}
-<div id="content">
-    <h1 style="margin: 100px;">Tết Nguyên Đán – Tết cổ truyền của dân tộc Việt Nam</h1>
-</div>
+                        <div class="accordion-item" id="heading-2">
+                            <h2 class="accordion-header" id="heading-2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                                    Ẩm thực miền trung
+                                </button>
+                            </h2>
+                            <div id="chapter-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#chapters"> 
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div 
+                                        class="fw-bold">Bánh tét</div>
+                                        Bánh tét gói lá dong - Đơn giản mà ngon không tưởng
+                                      </div>
+                                      <img class="img-fluid w-25 h-25" src="https://cdn.tgdd.vn/Files/2020/11/18/1307586/dan-trong-nghe-mach-cach-xao-nep-goi-banh-tet-thom-ngon-hap-dan-202011181349419001.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Thịt muối</div>
+                                        Món thịt mặn mặn, ngọt ngọt tạo thêm hương vị ngày tết
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://wru.edu.vn/wp-content/uploads/2018/03/cach-lam-thit-muoi-1.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Nem chua</div>
+                                        Giòn giòn, chua chua, the cay vừa phải 
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://cdn.daynauan.info.vn/wp-content/uploads/2019/09/nem-chua-thanh-hoa.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Chả bò</div>
+                                          Màu chả đỏ hồng, vị mặn, giòn, ngọt, dai, cay và thơm đã trở thành món khoái khẩu ngày tết
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://luankha.com/wp-content/uploads/2020/02/chE1BAA3-bC3B2-bC3ACnh-C491inh-600x549.jpg" alt="">
+                                      </li>
+                                  </ol>
+                            </div>
+                        </div>
 
-{% endblock %}
-<!-- End content -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-3">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-3">
+                                    Ẩm thực Tết miền Nam
+                                </button>
+                            </h2>
+                            <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters"> 
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div 
+                                        class="fw-bold">Bánh tét</div>
+                                        Không đơn điệu như miền Trung, bánh tét miền Nam đa dạng cả về nguyên liệu lẫn mùi vị
+                                      </div>
+                                      <img class="img-fluid w-25 h-25" src="https://lh3.googleusercontent.com/proxy/5ueOcR_ybYXQytL5JLrqExEOnkJOsI3kfE9NBlBDXlYwhuwpvNHt-EUU9S7jvd-RQJ9IC6if_5g9xIZtQJ-YLvQ9hUk4EmZpoaFoToNrZeEDzq-xroVn0syaZRD_iCvJBSk" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Lạp xưởng</div>
+                                        Món ăn không thể thiếu trên mâm cơm gia đình 
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://tapchinhabep.net/wp-content/uploads/2020/01/hinh-lap-xuong-600x400.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Củ kiệu tôm khô</div>
+                                        Củ kiệu tôm khô với đủ vị mặn, ngọt, giòn, hăng, chua rất đặc sắc 
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://cdn.tgdd.vn/Files/2015/02/06/607191/cach-lam-mon-nham-tom-kho-cu-kieu-cuc-ngon-cho-ngay-tet-avat-760x367.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Thịt kho nước dừa</div>
+                                          Kho càng lâu thịt càng thấm, ăn càng ngon, càng đậm đà 
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://thucthan.com/media/2019/11/thit-kho-nuoc-dua/thit-kho-nuoc-dua.jpg" alt="">
+                                      </li>
+                                  </ol>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-4">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-4" aria-expanded="true" aria-controls="chapter-4">
+                                    Ẩm thực nước ngoài
+                                </button>
+                            </h2>
+                            <div id="chapter-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#chapters"> 
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div 
+                                        class="fw-bold">Trung Quốc</div>
+                                        Sủi cảo là món ăn truyền thống của người dân vào ngày tết
+                                      </div>
+                                      <img class="img-fluid w-25 h-25" src="https://songkhoe.medplus.vn/wp-content/uploads/2020/04/ha-cao-so-diep-mon-an-thanh-dam-cho-khoi-dau-ngay-moi.png" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Hàn Quốc</div>
+                                       Tteokguk - Canh bánh gạo, bữa ăn đầu tiên của năm mới người Hàn 
+                                      </div>
+                                      <img class="img-fluid w-25" src="http://res.heraldm.com/content/image/2013/02/07/20130207001108_0.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                      <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Nhật bản</div>
+                                        Osechi Ryori - tên gọi chung của những món ăn ngày đầu năm mới của người Nhật 
+                                      </div>
+                                      <img class="img-fluid w-25" src="https://upload.wikimedia.org/wikipedia/commons/5/52/Japanese_Osechi.jpg" alt="">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Lào</div>
+                                          Món ăn truyền thống là món "Lạp" có nghĩa là lộc 
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/File/Image/mon_lap_cua_nguoi_lao.jpg" alt="">
+                                      </li>
+                                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Singapore</div>
+                                          Không thể thiếu món gỏi cá Yusheng - gỏi thịnh vượng trong bữa cơm đầu năm 
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://www.toursingapore.net.vn/images/van-hoa/am-thuc/Yusheng-3.jpg" alt="">
+                                      </li>
+                                      <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                          <div class="fw-bold">Mỹ</div>
+                                          Hoppin'John có truyền thống lâu đời và đặc biệt tại miền Nam nước Mỹ
+                                        </div>
+                                        <img class="img-fluid w-25" src="https://res.cloudinary.com/hksqkdlah/image/upload/7900_sfs-hoppin-john-10-280639.jpg" alt="">
+                                      </li>
+                                  </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section id="footer">
+        <footer class="text-center text-white" style="background-color: #caced1;">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!-- Section: Images -->
+              <section class="">
+                <div class="row">
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img
+                        src="https://hanoi1000.vn/wp-content/uploads/2020/12/tet-nguyen-dan-la-gi.jpg"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img
+                        src="https://media-cdn.laodong.vn/storage/newsportal/2020/1/23/780207/Ban-Phao-Hoa-Tam-Cao.jpg?w=720&crop=auto&scale=both"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img
+                        src="https://lh3.googleusercontent.com/proxy/aK5xcwXID2sWCH3nhhNglBToiMuJO6vXrJI62I5Bfgmajqn7QDl-qA0KbkTmOb65ekjZ8h0c1iWvUOTVfl3Xnt-dLmqGjfhjy1USCV4hC2IBfiU"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img
+                        src="https://media.vov.vn/uploaded/e0wcicisdxanwqtgwtjowg/2017_01_19/1_xoaj.jpg"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img
+                        src="https://ohay.vn/blog/wp-content/uploads/2020/12/cac-loai-hoa-chung-ngay-tet-1.jpg"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img
+                        src="https://mdbootstrap.com/img/new/fluid/city/116.jpg"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="text-center p-3 display-6" style="background-color: rgba(0, 0, 0, 0.2);">
+                Welcome, we are Food_TPT's team!!
+              </div>
+          </footer>
+
+    </section>
+</body>
+</html>

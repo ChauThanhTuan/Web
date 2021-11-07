@@ -11,20 +11,17 @@
 
 #intro {
     width: 80%;
-    width: 700px;
     top: 40px;
     left: 150px;
-    position: relative;
 }
 #intro img {
     width: 100%;
     height: 500px;
     position: relative;
-
 }
 #intro #intro_diets {
     width: 900px;
-    height: 600px;
+    height: 150px;
     background-color: rgb(255, 255, 255);
     top: 400px;
     left: 80px;
@@ -36,9 +33,4 @@
     color: rgb(28, 22, 117);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 10px;
-}
-#intro_diets p{
-    color: rgb(0, 0, 0);
-    padding-left: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

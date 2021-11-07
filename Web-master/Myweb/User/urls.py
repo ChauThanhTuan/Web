@@ -43,4 +43,7 @@ urlpatterns = [
 
     #Begin Special Diets
     path('menu/SpecialDiets/main.html', views.Special_Diets_View, name='Special_Diets'),
+
+    #Begin Food News
+    path('menu/FoodNews/main.html', views.Food_News_View, name='Food_News'),
 ]

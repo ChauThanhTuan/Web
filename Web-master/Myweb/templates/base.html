@@ -140,7 +140,7 @@
                                 Meals & Cooking
                                 <i class="fas fa-angle-right menu-options-more"></i>
                             </a></li>
-                            <li><a href="#" id="optionsFoodNews" class="mealplansType">Food News</a></li>
+                            <li><a href="{% url 'Food_News' %}" id="optionsFoodNews" class="mealplansType">Food News</a></li>
                             <li><a href="#" id="optionsHolidays" class="mealplansType">
                                 Holidays
                                 <i class="fas fa-angle-right menu-options-more"></i>
@@ -170,23 +170,13 @@
                             </ul>
                         </div>
 
-                        <div id="FoodNews" class="hidden">
-                            <ul>
-                                <li><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                                <li><a href="">3</a></li>
-                                <li><a href="">4</a></li>
-                                <li><a href="">5</a></li>
-                            </ul>
-                        </div>
-
                         <div id="Holidays" class="hidden">
                             <ul>
                                 <li><a href="{% url 'Holiday_Recipes' %}">Holiday Recipes</a></li>
                                 <li><a href="">Halloween</a></li>
                                 <li><a href="">Christmas</a></li>
                                 <li><a href="">Valentine's Day</a></li>
-                                <li><a href="">New Year's Eve</a></li>
+                                <li><a href="{% url 'Tet_Nguyen_Dan' %}">Lunar New Year</a></li>
                             </ul>
                         </div>
 
