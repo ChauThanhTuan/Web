@@ -10,39 +10,100 @@
 {% block service %}active{% endblock %}
 {% block content %}
 <div class="services pd">
-    <div class="container">
-        <h3 class="title">Dịch vụ của chúng tôi</h3>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <div class="square"><i class="fas fa-heartbeat"></i></i></div>
-                <div class="serv">
-                    <h5>Cung cấp một khẩu phần ăn hợp lý</h5>
-                    <p>Ăn uống hợp lý là một việc vô cùng quan trọng đối với mõi chúng ta. Nhưng hầu hết mọi người sẽ không biết ăn uống như thế nào là hợp lý.</p>
+        <div class="container">
+            <h3 class="title">Dịch vụ của chúng tôi</h3>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <form id="regForm">
+                        <h1 id="register" class="text-secondary">Hãy cho chúng tôi biết một số thông tin liên quan đến bạn?</h1>
+                        <div class="all-steps" id="all-steps"> 
+                            <span class="step">
+                                <i class="fa fa-user"></i>
+                            </span> 
+                            <span class="step">
+                                <i class="fa fa-map-marker"></i>
+                            </span> 
+                            <span class="step">
+                                <i class="fa fa-shopping-bag"></i>
+                            </span> <span class="step">
+                                <i class="fa fa-car"></i>
+                            </span> 
+                            <span class="step">
+                                <i class="fa fa-spotify"></i>
+                            </span> 
+                            <span class="step">
+                                <i class="fa fa-mobile-phone"></i>
+                            </span> 
+                        </div>
+                        <div class="tab">
+                            <h6>Họ và  tên?</h6>
+                            <p> <input placeholder="Name..." oninput="this.className = ''" name="fname"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>Độ  tuổi?</h6>
+                            <p><input placeholder="Agee..." oninput="this.className = ''" name="dd"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>Chiều  cao?</h6>
+                            <p><input placeholder="Heightt..." oninput="this.className = ''" name="email"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>Cân  nặng?</h6>
+                            <p><input placeholder="Weight..." oninput="this.className = ''" name="uname"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>Nghề  nghiệp?</h6>
+                            <p><input placeholder="Vd: Văn  phòngg..." oninput="this.className = ''" name="uname"></p>
+                        </div>
+
+                        <div class="thanks-message text-center" id="text-message"> <img src="https://media.istockphoto.com/photos/paint-splatter-thank-you-picture-id1132817705" width="100" class="mb-4">
+                            <h3>Thankyou for your feedback!</h3> <span>Thanks for your valuable information. It helps us to improve our services!</span>
+                        </div>
+                        <div style="overflow:auto;" id="nextprevious">
+                            <div style="float:right;"> 
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </button> 
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                                    <i class="fa fa-angle-double-right"></i>
+                                </button> 
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="serv">
-                    <div class="square"><i class="fas fa-dumbbell"></i></div>
-                    <h5>Problem Solving</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="square"><i class="fas fa-heartbeat"></i></i></div>
+                    <div class="serv">
+                        <h5>Cung cấp một khẩu phần ăn hợp lý</h5>
+                        <p>Ăn uống hợp lý là một việc vô cùng quan trọng đối với mõi chúng ta. Nhưng hầu hết mọi người sẽ không biết ăn uống như thế nào là hợp lý.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="square"><i class="fas fa-hamburger"></i></div>
-                <div class="serv">
-                    <h5>Best Domain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <div class="col-md-3">
+                    <div class="serv">
+                        <div class="square"><i class="fas fa-dumbbell"></i></div>
+                        <h5>Problem Solving</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="square"><i class="fas fa-user-shield"></i></div>
-                <div class="serv">
-                    <h5>Secure Website</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <div class="col-md-3">
+                    <div class="square"><i class="fas fa-hamburger"></i></div>
+                    <div class="serv">
+                        <h5>Best Domain</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="square"><i class="fas fa-user-shield"></i></div>
+                    <div class="serv">
+                        <h5>Secure Website</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <script src="{% static '/js/service.js' %}"></script>
 {% endblock %}
 
