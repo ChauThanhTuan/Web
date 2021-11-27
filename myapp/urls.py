@@ -21,4 +21,5 @@ urlpatterns = [
 
     #Begin Vegan
     path('menu/Vegan', views.vegan_view, name='vegan'),
+    path('menu/Vegan/VeganHealthy', views.vegan_paper_1_view, name='vegan_paper(1)'),
 ]

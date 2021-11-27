@@ -68,3 +68,5 @@ def loss_gain_paper_3_view(request):
 #begin vegan
 def vegan_view(request):
     return render(request, 'main/vegan/vegan.html')
+def vegan_paper_1_view(request):
+    return render(request, 'main/vegan/vegan(1).html')
