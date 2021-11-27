@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Giảm cân{% endblock %}
+{% block menu %}active{% endblock %}
+{% block content %}
+<div class="mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="/">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="{% url 'menu' %}">Menu</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="{% url 'lossgain' %}">Loss Gain</a></li>
+            <li class="breadcrumb-item" aria-current="page">Loss Gain</li>
+        </ol>
+    </nav>
+</div>
+
+{% endblock %}

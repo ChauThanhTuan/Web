@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Dịch Vụ{% endblock %}
+
+{% block css %}{% static '/css/service.css' %}{% endblock %}
+{% block link %} 
+<link rel="icon" type="image/png" href="{% static '/images/icons/favicon.ico' %}" />
+{% endblock %}
+
+{% block service %}active{% endblock %}
+{% block content %}
+<div class="services pd">
+    <div class="container">
+        <h3 class="title">Dịch vụ của chúng tôi</h3>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="square"><i class="fas fa-heartbeat"></i></i></div>
+                <div class="serv">
+                    <h5>Cung cấp một khẩu phần ăn hợp lý</h5>
+                    <p>Ăn uống hợp lý là một việc vô cùng quan trọng đối với mõi chúng ta. Nhưng hầu hết mọi người sẽ không biết ăn uống như thế nào là hợp lý.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="serv">
+                    <div class="square"><i class="fas fa-dumbbell"></i></div>
+                    <h5>Problem Solving</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="square"><i class="fas fa-hamburger"></i></div>
+                <div class="serv">
+                    <h5>Best Domain</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="square"><i class="fas fa-user-shield"></i></div>
+                <div class="serv">
+                    <h5>Secure Website</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

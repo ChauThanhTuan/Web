@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block link %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% block css %}{% endblock %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/02876ccd43.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-around">
+
+            <a class="navbar-brand" href="#">
+                <img src="{% static '/images/logo.png' %}" alt="" width="35" height="29"
+                    class="d-inline-block align-text-top">
+                Healthy Diet
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav me-auto mb-lg-0 mx-auto">
+                <li class="nav-item mx-1">
+                    <a class="nav-link {% block home %}{% endblock %}" href="/">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block about %}{% endblock %} " href="{% url 'about' %}">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block service %}{% endblock %}" href="{% url 'service' %}">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block contact %}{% endblock %}" href="{% url 'contact' %}">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block menu %}{% endblock %}" href="{% url 'menu' %}">Menu</a>
+                </li>
+            </ul>
+
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-search" onclick="openSearch()"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">
+                        <i class="fas fa-user-astronaut"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div id="myOverlay" class="overlay">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+            <div class="overlay-content">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <div>
+    {% block content %}{% endblock %}
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-distributed navbar-light bg-light">
+
+        <div class="footer-left">
+            <h3><span>Healthy </span>Diet</h3>
+            <p class="footer-links">
+                <a href="/">Trang chủ</a>
+                ·
+                <a href="{% url 'about' %}">Giới thiệu</a>
+                ·
+                <a href="{% url 'service' %}">Dịch vụ</a>
+                ·
+                <a href="{% url 'contact' %}">Liên hệ</a>
+                ·
+                <a href="{% url 'menu' %}">Menu</a>
+            </p>
+
+            <p class="footer-company-name">
+                Group 11 &copy; 2021</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Trà Vinh </span> Việt Nam</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+84 123456789</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com"> Team@gmail.com </a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Giới thiệu</span>
+                Healthy Diet là một trang web cho nhưng ai muốn có một khẩu phần ăn hợp lí &amp; có kế hoạch.
+            </p>
+            <div class="footer-icons">
+                <a href="#"> <i class="fab fa-facebook-square"></i> </a>
+                <a href="#"> <i class="fab fa-twitter"></i> </a>
+                <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                <a href="#"> <i class="fab fa-github-alt"></i> </a>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <script src="{% static '/bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static '/js/main.js' %}"></script>
+    {% block event %}{% endblock %}
+</body>
+</html>
