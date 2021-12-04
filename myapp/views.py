@@ -71,7 +71,6 @@ def vegan_view(request):
 def vegan_paper_1_view(request):
     return render(request, 'main/vegan/vegan(1).html')
 
-
 #Begin other
 def other_view(request):
     return render(request, 'main/other/other.html')
@@ -83,3 +82,10 @@ def other_paper_3_view(request):
     return render(request, 'main/other/other(3).html')
 def other_paper_4_view(request):
     return render(request, 'main/other/other(4).html')
+
+#weight gain
+def weight_gain(request):
+    return render(request, 'main/weight gain/weight_gain.html')
+def weight_gain_paper(request):
+    return render(request, 'main/weight gain/weight_gain_paper.html')
+
