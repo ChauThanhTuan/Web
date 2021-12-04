@@ -1,171 +1,133 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block title %}Ăn chay{% endblock %}
-{% block css %}{% static '/css/lost_gain.css' %}{% endblock %}
+
 {% block menu %}active{% endblock %}
 {% block content %}
-<!-- Showcase -->
-<section class="bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+<div class="mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="/">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="{% url 'menu' %}">Menu</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="{% url 'vegan' %}">Vegan</a></li>
+            <li class="breadcrumb-item" aria-current="page">Loss Gain</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="p-3 p-lg-0 pt-lg-3 text-center text-sm-start">
     <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <div class="block-heading">
+                        <h1 class="text-center text-danger"><strong>THỰC ĐƠN ĂN CHAY HÀNG NGÀY 7 NGÀY TRONG TUẦN ĐẦY ĐỦ CHẤT DINH DƯỠNG, ĂN CHAY MỘT CÁCH KHOA HỌC</strong></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
             <div>
-                <h1>Giá trị của <span class="text-danger"> Ăn chay </span></h1>
-                    <p class="lead my-4">
-                        Một chế độ ăn chay hợp lý là cách để đáp ứng nhu cầu dinh dưỡng một cách lành mạnh. Nó sẽ giúp chúng ta tránh được nhiều bệnh tật mà vẫn đảm bảo sức khỏe.
-                    </p>
-                    <button
-                    class="btn btn-primary btn-lg"
-                    data-bs-toggle="modal"
-                    data-bs-target="#enroll"
-                >
-                    Đăng ký tài khoản
-                    </button>
+                <h3 class="text-success">1. Nguyên tắc của thực đơn ăn chay</h3>
+                <p>Ăn chay hay ăn mặn bạn vẫn phải đảm bảo dinh dưỡng trong khẩu phần thực đơn hàng ngày. Để có bữa chay đủ chất cho cả nhà, chúng ta cần lựa chọn các loại thực phẩm có thể thay thế vì chúng ta đã phải loại bỏ đi một số chất dinh dưỡng cần thiết và có rất nhiều trong cá và thịt mà thay thế chúng bằng nguồn cung từ thực vật. Người ăn chay phải có một thực đơn cho riêng mình để đảm bảo cung cấp dinh dưỡng đầy đủ cho bản thân.</p>
+                <center><img class='mt-1 img-fluid' src="{% static '/images/vegan(8).jpg' %}" alt=""></center>
             </div>
-            <img
-                class="img-fluid w-50 d-none d-sm-block"
-                src="{% static '/images/vegan(1).jpg' %}"
-                alt=""
-                />
-        </div>
-    </div>
-</section>
-<!--end show case-->
-
-<!-- Information Loss Gain -->
-<section class="p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-    <div class="container">
-        <h2 class="heading"><span>CHẾ ĐỘ ĂN CHAY</span> </h2>
-        <p>Khi nói về chế độ ăn chay, chúng ta thường nghĩ đến một chế độ ăn kiêng không bao gồm thịt, gia cầm hoặc cá. Nhưng thực tế có nhiều chế độ ăn chế độ ăn chay khác nhau và mỗi loại ăn chay lại có những thực phẩm loại trừ không giống nhau:</p>
-        <div class="row">
-            <h3>1. Chế độ ăn chay Lacto</h3>
-            <p class="mx-5">Loại trừ thịt, cá, thịt gia cầm và trứng, cũng như thực phẩm có chứa chúng. Người theo chế độ ăn chay này sẽ ăn các sản phẩm sữa, như sữa, phô mai, sữa chua và bơ.</p>
-        </div>
-        <div class="row">
-            <h3>2. Chế độ ăn chay Ovo</h3>
-            <p class="mx-5">Loại trừ thịt, gia cầm, hải sản và các sản phẩm từ sữa, nhưng cho phép trứng.</p>
-        </div>
-        <div class="row">
-            <h3>3. Chế độ ăn kiêng kiểu pittông</h3>
-            <p class="mx-5">Loại trừ thịt và gia cầm, sữa và trứng, nhưng cho phép cá.</p>
-        </div>
-        <div class="row">
-            <h3>4. Chế độ ăn chay không bao gồm thịt</h3>
-            <p class="mx-5">Thịt gia cầm, cá, trứng và các sản phẩm từ sữa - và thực phẩm có chứa các sản phẩm này.</p>
-        </div>
-        <div class="row">
-            <h3>5. Một số người theo chế độ ăn bán nguyệt</h3>
-            <p class="mx-5">Còn được gọi là chế độ ăn kiêng flexitarian - chủ yếu là chế độ ăn dựa trên thực vật nhưng bao gồm thịt, sữa, trứng, thịt gia cầm và cá trong một số lượng nhỏ.</p>
-        </div>
-    </div>
-</section>
-
-<section class="p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-    <div class="container">
-        <h2 class="heading"><span>DINH DƯỠNG CẦN THIẾT</span> </h2>
-        <h3 class="text-danger">Canxi và Vitamin D</h3>
-        <p><strong>Canxi</strong> giúp xây dựng và duy trì răng xương chắc khỏe. Sữa và thực phẩm từ sữa có hàm lượng canxi cao nhất. Tuy nhiên, các loại rau xanh đậm như củ cải và rau xanh, cải xoăn và bông cải xanh,vv... là nguồn thực vật tốt khi ăn với số lượng đủ.</p>
-        <p><strong>Vitamin D</strong> đóng một vai trò quan trọng đối với sức khỏe của xương. Vitamin D thường được thêm vào sữa bò, một số nhãn hiệu sữa đậu nành và sữa gạo, và một số ngũ cốc và bơ thực vật.</p>
-        <center><img class="img-fluid px-3" src="{% static '/images/vegan(2).jpg' %}" alt=""></center>
-        <h3 class="text-danger">Vitamin B12</h3>
-        <p><strong>Vitamin B-12 </strong> rất cần thiết để tạo ra các tế bào hồng cầu và ngăn ngừa thiếu máu. Vitamin này được tìm thấy trong các sản phẩm động vật, vì vậy có thể khó có đủ B-12 trong chế độ ăn thuần chay. Ở những người ăn chế độ ăn thuần chay có khi không phát hiện ra sự thiếu hụt vitamin B12 do chế độ của họ rất giàu vitamin gọi là folate, có thể che giấu sự thiếu hụt vitamin B-12 cho đến khi xảy ra vấn đề nghiêm trọng. Vì lý do này, điều quan trọng đối với người ăn chay là xem xét bổ sung vitamin, ngũ cốc giàu vitamin và các sản phẩm từ đậu nành.</p>
-        <p>Uống bổ sung khoáng chất vitamin hàng ngày cung cấp đầy đủ các chất dinh dưỡng trên là một cách khác để đảm bảo đủ dinh dưỡng. Nếu bạn áp dụng chế độ ăn thuần chay, bạn cũng cần hiểu khái niệm về protein bổ sung. Thực phẩm thực vật chứa nhiều protein, nhưng axit amin của chúng không đầy đủ. Vì vậy, để đảm bảo đủ protein, hãy kết hợp ăn các loại thực phẩm thực vật khác nhau - ví dụ, bằng cách ăn đậu cùng với gạo.</p>
-        <h3 class="text-danger">Chất đạm</h3>
-        <p><strong>Protein</strong> giúp duy trì làn da, xương, cơ và các cơ quan khỏe mạnh. Trứng và các sản phẩm từ sữa là nguồn cung cấp protein rất tốt và nên được cung cấp với một lượng vừa đủ. Cơ thể cũng có thể nhận đủ protein từ thực phẩm có nguồn gốc thực vật nếu chúng ta ăn nhiều loại trong suốt cả ngày. Nguồn thực vật bao gồm các sản phẩm đậu nành và các chất thay thế thịt, các loại đậu, đậu lăng, các loại hạt, hạt và ngũ cốc.</p>
-        <h3 class="text-danger">Axit béo omega-3</h3>
-        <p><strong>Axit béo omega-3</strong> rất quan trọng đối với sức khỏe của tim. Chế độ ăn kiêng không bao gồm cá và trứng thường có hàm lượng axit béo omega-3 thấp. Dầu canola, dầu đậu nành, quả óc chó, đậu nành là nguồn cung cấp axit béo thiết yếu.</p>
-        <center><img class="img-fluid px-3" src="{% static '/images/vegan(3).jpg' %}" alt=""></center>
-        <h3 class="text-danger">Sắt và kẽm</h3>
-        <p><strong>Sắt </strong> là một thành phần quan trọng của các tế bào hồng cầu. Đậu khô và đậu Hà Lan, đậu lăng, ngũ cốc, các sản phẩm ngũ cốc nguyên hạt, rau xanh đậm và trái cây khô là những nguồn chất sắt tốt. Bởi vì sắt không dễ dàng được hấp thụ từ các nguồn thực vật, nên lượng sắt được khuyến nghị cho người ăn chay gần như gấp đôi so với khuyến nghị cho người không ăn chay. Để giúp cơ thể hấp thụ chất sắt, hãy ăn thực phẩm giàu vitamin C, chẳng hạn như dâu tây, trái cây họ cam quýt, cà chua, bắp cải và bông cải xanh, cùng lúc với việc bạn đang ăn thực phẩm có chứa sắt.</p>
-        <p>Giống như sắt, <strong>kẽm</strong> không dễ dàng được hấp thụ từ các nguồn thực vật như từ các sản phẩm động vật. Phô mai là một lựa chọn tốt nếu bạn ăn các sản phẩm từ sữa. Nguồn kẽm thực vật bao gồm ngũ cốc nguyên hạt, các sản phẩm từ đậu nành, các loại đậu, hạt và mầm lúa mì. Kẽm là thành phần thiết yếu của nhiều enzyme và đóng vai trò trong sự phân chia tế bào và hình thành protein.</p>
-        <h3 class="text-danger">Iốt</h3>
-        <p><strong>Iốt</strong> là một thành phần trong hormone tuyến giáp, giúp điều chỉnh sự trao đổi chất, tăng trưởng và chức năng của các cơ quan quan trọng. Người ăn chay có thể không nhận đủ iốt và có thể có nguy cơ bị thiếu và thậm chí có thể bị bướu cổ. Ngoài ra, các thực phẩm như đậu nành, rau họ cải và khoai lang có thể thúc đẩy bướu cổ.</p>
-    </div>
-</section>
-
-<section class="blogs" id="blogs">
-
-    <h2 class="heading"><span>Thực đơn</span> </h2>
-
-    <div class="box-container">
-
-        <div class="box text-center">
-            <img src="{% static '/images/vegan(7).jpg' %}" alt="">
-            <div class="content">
-                <h3>Món chay hiệu quả cho người ăn chay trường</h3>
-                <p>Ăn chay trường nhưng vẫn phải đảm bảo sức khoẻ cho người trong gia đình.</p>
-                <a href="{% url 'paper_lg(2)' %}" class="btn btn-outline-dark">Chi tiết</a>
-            </div>
-        </div>
-
-        <div class="box text-center">
-            <img src="{% static '/images/vegan(5).jpg' %}" alt="">
-            <div class="content">
-                <h3>Thực đơn ăn chay khoa học và đủ dinh dưỡng</h3>
-                <p>Thực đơn ăn chay đủ chất dinh dưỡng cho người bận rộn hằng ngày</p>
-                <a href="{% url 'paper_lg(3)' %}" class="btn btn-outline-dark">Chi tiết</a>
-            </div>
-        </div>
-
-        <div class="box text-center">
-            <img src="{% static '/images/vegan(6).jpg' %}" alt="">
-            <div class="content">
-                <h3>Chế độ dinh dưỡng hợp lý cho người ăn chay</h3>
-                <p>Bổ sung đầy đủ những dưỡng chất cần thiết giúp người ăn chay khỏe mạnh.</p>
-                <a href="{% url 'paper_lg(2)' %}" class="btn btn-outline-dark">Chi tiết</a>
-            </div>
-        </div>
-
-</section>
-    
-<section>
-    <h2 class="heading"><span>Kiến thức</span></h2>
-    <div class="row py-2 justify-content-center">
-        <div class="col-md-6 col-12 col-lg-3 mb-4 mb-lg-0">
-            <div class="border p-3 border-warning">
-              <div class="text-center">
-                <img width="128px"  src="{% static '/images/vegan.jpg' %}" alt="">
-              </div>
-              <div class="text-center">
-                <h5 class="text-uppercase py-2">Ăn chay phù hợp</h5>
-                <p class="">
-                  Thực đơn ăn chay đủ chất dinh dưỡng cho người bận rộn.
+            <div>
+                <h3 class="text-success">2. Khẩu phần ăn chay lý tưởng, đúng cách và đầy đủ gồm những gì</h3>
+                <p>Ngũ cốc: 50% rau và trái cây: 33% các loại thực phẩm khác: 17% ăn chay giảm cân.</p>
+                <p>Có một thực tế là chúng ta hoàn toàn có thể khỏe mạnh mà không cần phải ăn thịt. Nhưng một chế độ ăn kiêng thịt chưa chắc đã mang lại cho chúng ta một thân hình mảnh mai và cơ thể khỏe mạnh. Để có thể thành công trong việc giảm cân, cần phải tuân thủ những điều sau.</p>
+                <p>Không ăn vặt. Các thức ăn vặt như bánh ngọt, khoai tây chiên có thể khiến tăng cân vì chúng thường có hàm lượng chất béo cao.</p>
+                <p>Không sử dụng quá nhiều chất béo khi chiên, xào đồ ăn.</p>
+                <p>
+                    Hãy có nhiều món ăn cho mỗi bữa, bởi vì không có loại thực phẩm thực vật nào giàu protein và dưỡng chất như thịt. Nếu không ăn thịt, hãy kết hợp các loại rau củ khác nhau trong một bữa ăn để cơ thể được cung cấp đầy đủ dưỡng chất.
                 </p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-dark">Chi tiết</button>
-              </div>
-            </div>
-          </div>
-        
-        <div class="col-md-6 col-12 col-lg-3 mb-4">
-            <div class="border p-3 border-warning">
-            <div class="text-center">
-                <img width="128px" src="{% static '/images/diet.jpg' %}" alt="">
-            </div>
-            <div class="text-center">
-                <h5 class="text-uppercase py-2">Thực phẩm phù hợp</h5>
-                <p class="">
-                Những loại thực phẩm không thể thiếu trong giai đoạn giảm cân.
+                <p>
+                    Các chất dinh dưỡng có trong thịt mà ít có trong các loại thực phẩm khác bao gồm: sắt, canxi, vitamin D, vitamin B 12 , kẽm và protein.
                 </p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal"  class="btn  btn-outline-dark">Chi tiết</button>
+                <center><img class='mt-1 img-fluid' src="{% static '/images/vegan(9).jpg' %}" alt=""></center>
+                <p>Bổ sung vitamin và các khoáng chất. Một chế độ ăn chay khỏe mạnh phải cung cấp đầy đủ các dưỡng chất mà cơ thể đòi hỏi. Nếu vì một lý do nào đấy mà chế độ ăn không cung cấp đủ chất dinh dưỡng, hoặc cảm thấy mệt mỏi, có thể hỏi ý kiến tư vấn của các chuyên gia dinh dưỡng để dùng thêm một số vitamin hỗn hợp. Nhưng tuyệt đối không dùng chúng thay thế cho các bữa ăn.</p>
             </div>
+            <div>
+                <h3 class="text-success">3. Thực đơn dinh dưỡng hàng ngày cho người ăn chay bận rộn</h3>
+                <p>Dựa trên những chất bắt buộc phải có kể trên, để có một bữa ăn chay đầy đủ dinh dưỡng với xấp xỉ 1.500 kcal/ngày:</p>
+                
+                <p>
+                    <strong>Sáng: </strong>Bạn có rất nhiều lựa chọn cho buổi sáng như mì bò viên chay, bún xào, bánh mì bơ đậu phộng, bánh bao chay, bún riêu chay.v.v.
+                </p>
+                <p>
+                    <strong>Giữa sáng: </strong>Sữa chua, bánh ram ít chay, dâu tây trộn sữa, trái cây, một hủ sữa chua.v.v.
+                </p>
+                <p>
+                    <strong>Tưa: </strong>Buổi trưa là một bữa quan trọng trong ngày nên việc chú trọng và cầu kỳ trong thực đơn là điều cần thiết.
+                </p>
+                <p>
+                    Một bữa trưa đầy đủ dưỡng chất gồm các món như: cơm, đậu hủ xốt cà chua, canh cải xanh và một loại trái cây tráng miệng; cơm, đậu hủ chiên sả, canh khổ qua và đồ xào; cơm, canh bí đỏ, đậu hủ kho và su hào xào; cơm, cải xào, canh chua rau muống, mì căn chiên; .v.v.
+                </p>
+                <center><img class='mt-1 img-fluid' src="{% static '/images/vegan(10).jpg' %}" alt=""></center>
+                <p>
+                    <strong>Giữa trưa: </strong>Bạn có thể chọn trái cây, khoai lang, sữa chua hoặc một ly sữa đậu nành..v.v.
+                </p>
+                <p>
+                    <strong>Chiều: </strong>Cơm, khổ qua hầm, canh cải thảo; mì, canh bí xanh, nấm kho; cơm, rau ngót nấu rơm, mít non kho; cơm, khổ qua hầm, canh cải thảo.v.v
+                </p>
+                <p><strong class="text-danger">Lưu ý:</strong> Nếu như bạn ăn chay không vì lý do tín ngưỡng hoặc tôn giáo thì bạn có thể chế biến thêm các món ăn từ trứng, vì trứng cung cấp rất nhiều protein.</p>
             </div>
         </div>
-    
-        <div class="col-md-6 col-12 col-lg-3 mb-4">
-            <div class="border p-3 border-warning">
-                <div class="text-center">
-                    <img width="128px"  src="{% static '/images/diet(2).jpg' %}" alt="">
-                </div>
-                <div class="text-center">
-                <h5 class="text-uppercase py-2">Giảm cân khoa học</h5>
-                <p class="">
-                Những bí quyết giảm cân an toàn và hiệu quả dành cho phụ nữ.
-                </p>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal"  class="btn  btn-outline-dark">Chi tiết</button>
-                </div>
+        <div>
+            <h3 class="text-success">4. Thực đơn ăn chay trong 1 tuần đúng cách, khoa học</h3>
+            <div class="my-3 mx-5">
+                <p><strong>Thứ hai</strong></p>
+                <ul>
+                    <li>Sáng: Mì bò viên chay.</li>
+                    <li>Giữa sáng: Xoài chín.</li>
+                    <li>Trưa: Cơm, canh khổ qua, đậu hủ chiên sả, một múi bưởi.</li>
+                    <li>Giữa trưa: Một ly sữa đậu nành không đường.</li>
+                    <li>Chiều: Cơm, canh rau ngót nấu nấm rơm, mít non kho và một múi bưởi.</li>
+                </ul>
+                <p><strong>Thứ ba</strong></p>
+                <ul>
+                    <li>Sáng: Bún xào.</li>
+                    <li>Giữa sáng: Dâu tây trộn sữa chua.</li>
+                    <li>Trưa: Cơm, canh bí đỏ nấu đậu phộng, đậu hủ kho.</li>
+                    <li>Giữa trưa: Khoai lang và một ly sữa đậu nành không đường.</li>
+                    <li>Chiều: Canh bí xanh, nấm kho.</li>
+                </ul>
+                <p><strong>Thứ tư</strong></p>
+                <ul>
+                    <li>Sáng: Mì bò viên chay.</li>
+                    <li>Giữa sáng: Một hũ sữa chua.</li>
+                    <li>Trưa: Cơm, đậu hủ xốt cà chua nấm, canh cải xanh, một quả táo.</li>
+                    <li>Giữa trưa: Một ly sữa đậu nành không đường.</li>
+                    <li>Chiều: Cơm, khổ qua hầm, canh cải thảo.</li>
+                </ul>
+                <p><strong>Thứ năm</strong></p>
+                <ul>
+                    <li>Sáng: Bánh mì bơ đậu phộng.</li>
+                    <li>Giữa sáng: Sữa chua.</li>
+                    <li>Trưa: Cơm, đậu phộng rang, canh chua nấu thơm, một trái mận.</li>
+                    <li>Giữa trưa: Một quả thanh long.</li>
+                    <li>Chiều: Cơm, canh mồng tơi, đậu hủ kho thập cẩm (đậu hủ, cà rốt, đậu đũa, măng tre) và một trái mận.</li>
+                </ul>
+                <p><strong>Thứ sáu</strong></p>
+                <ul>
+                    <li>Sáng: Bánh bao chay.</li>
+                    <li>Giữa sáng: Sữa tươi, đu đủ.</li>
+                    <li>Trưa: Cơm, canh khổ qua, đậu hủ xốt cà.</li>
+                    <li>Giữa trưa: Một quả lê.</li>
+                    <li>Chiều: Cơm, canh bí đỏ, cà rốt, khoai tây kho đậu phộng.</li>
+                </ul>
+                <p><strong>Thứ bảy</strong></p>
+                <ul>
+                    <li>Sáng: Bún riêu chay.</li>
+                    <li>Giữa sáng: Sữa tươi.</li>
+                    <li>Trưa: Cơm, bầu luộc, rau xào thập cẩm và một trái mận.</li>
+                    <li>Giữa trưa: Quýt.</li>
+                    <li>Chiều: Cơm, canh rau dền cơm, đậu hủ xốt nấm và một trái mận</li>
+                </ul>
             </div>
+            <center><img class='mt-1 img-fluid' src="{% static '/images/vegan(11).jpg' %}" alt=""></center>
         </div>
     </div>
 </section>
-
 {% endblock %}
-

@@ -70,3 +70,16 @@ def vegan_view(request):
     return render(request, 'main/vegan/vegan.html')
 def vegan_paper_1_view(request):
     return render(request, 'main/vegan/vegan(1).html')
+
+
+#Begin other
+def other_view(request):
+    return render(request, 'main/other/other.html')
+def other_paper_1_view(request):
+    return render(request, 'main/other/other(1).html')
+def other_paper_2_view(request):
+    return render(request, 'main/other/other(2).html')
+def other_paper_3_view(request):
+    return render(request, 'main/other/other(3).html')
+def other_paper_4_view(request):
+    return render(request, 'main/other/other(4).html')

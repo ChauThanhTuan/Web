@@ -22,4 +22,11 @@ urlpatterns = [
     #Begin Vegan
     path('menu/Vegan', views.vegan_view, name='vegan'),
     path('menu/Vegan/VeganHealthy', views.vegan_paper_1_view, name='vegan_paper(1)'),
+
+    #Begin other
+    path('menu/knowledge', views.other_view, name='other'),
+    path('menu/knowledge/calo', views.other_paper_1_view, name='other_paper(1)'),
+    path('menu/knowledge/taller', views.other_paper_2_view, name='other_paper(2)'),
+    path('menu/knowledge/cheap_food', views.other_paper_3_view, name='other_paper(3)'),
+    path('menu/knowledge/fruit', views.other_paper_4_view, name='other_paper(4)'),
 ]
