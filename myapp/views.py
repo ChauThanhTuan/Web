@@ -94,6 +94,12 @@ def other_paper_3_view(request):
     return render(request, 'main/other/other(3).html')
 def other_paper_4_view(request):
     return render(request, 'main/other/other(4).html')
+def other_paper_5_view(request):
+    return render(request, 'main/other/other(5).html')
+def other_paper_6_view(request):
+    return render(request, 'main/other/other(6).html')
+def other_paper_7_view(request):
+    return render(request, 'main/other/other(7).html')
 
 #weight gain
 def weight_gain(request):

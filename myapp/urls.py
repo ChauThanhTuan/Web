@@ -36,6 +36,9 @@ urlpatterns = [
     path('menu/knowledge/taller', views.other_paper_2_view, name='other_paper(2)'),
     path('menu/knowledge/cheap_food', views.other_paper_3_view, name='other_paper(3)'),
     path('menu/knowledge/fruit', views.other_paper_4_view, name='other_paper(4)'),
+    path('menu/knowledge/hieuqua', views.other_paper_5_view, name='other_paper(5)'),
+    path('menu/knowledge/hanche', views.other_paper_6_view, name='other_paper(6)'),
+    path('menu/knowledge/food_kid', views.other_paper_7_view, name='other_paper(7)'),
 
     # weight gain
     path('menu/WeightGain', views.weight_gain, name='weightgain'),
