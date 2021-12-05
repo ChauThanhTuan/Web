@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Suitable Food{% endblock %}
+{% block css %}{% static '/css/home.css' %}{% endblock %}
+{% block link %} 
+<link rel="icon" type="image/png" href="{% static '/images/icons/favicon.ico' %}" />
+<link rel="stylesheet" href="{% static '/css/home_add.css' %}">
+{% endblock %}
+
+{% block home %}active{% endblock %}
+
+{% block content %}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static '/images/header.png' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static '/images/header(1).jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static '/images/header(2).jpg' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <h1 class="fs-5 text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Chào mừng đến với thiên đường của những bữa ăn hợp lý !</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="featured-carousel owl-carousel">
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="testimony-wrap d-md-flex">
+                                    <div class="img" style="background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Fimage%2F1511p102-diet-good-bad-calories.jpg%3Fitok%3DpXN_1iMK);"></div>
+                                    <div class="text text-center p-4 py-xl-5 px-xl-5 d-flex align-items-center">
+                                        <div class="desc w-100">
+                                            <p class="h3 mb-5">"Tìm hiểu lượng calo và dinh dưỡng trong các loại thực phẩm thường dùng.</p>
+                                            <div class="pt-4">
+                                                <p class="name mb-0">Click để tìm hiểu ngay</p>
+                                                <!-- <span class="position">Project Manager</span> -->
+                                                <a href="{% url 'other_paper(1)' %}" type="button" class="btn btn-primary">Đọc thêm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="testimony-wrap d-md-flex">
+                                    
+                                    <div class="text text-center p-4 py-xl-5 px-xl-5 d-flex align-items-center">
+                                        <div class="desc w-100">
+                                            <p class="h3 mb-5">"Cung cấp những thực đơn phù hợp với những chỉ số cơ thể bạn.</p>
+                                            <div class="pt-4">
+                                                <p class="name mb-0">Click để tìm hiểu ngay</p>
+                                                <a href="{% url 'service' %}" type="button" class="btn btn-primary">Đọc thêm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="img" style="background-image: url(https://image.freepik.com/free-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <div class="testimony-wrap d-md-flex">
+                                    <div class="img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTATn-WZXxquuKDIPuozJZWqQM2xtj9q9MlQe0k_92xckwdu9gkNNISzTWfB7LJohO1qSA&usqp=CAU);"></div>
+                                    <div class="text text-center p-4 py-xl-5 px-xl-5 d-flex align-items-center">
+                                        <div class="desc w-100">
+                                            <p class="h3 mb-5">"Cung cấp những kiến thức cần thiết cho một bữa ăn khoa học hợp lý và đầy đủ chất dinh dưỡng.</p>
+                                            <div class="pt-4">
+                                                <p class="name mb-0">Click để tìm hiểu ngay</p>
+                                                <a href="{% url 'menu' %}" type="button" class="btn btn-primary">Đọc thêm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<article class="col-md-12">
+    <div class="cards-1 section-gray">
+        <div class="container">
+            <div class="row text-center pb-3 fs-4 ">
+                <h1 class="text-primary"  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Một số bài viết tiêu biểu</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="{% url 'paper_lg(1)' %}"> <img class="img" src="https://image.phunuonline.com.vn/news/2018/20180725/fckimage/134449_img-6008-1200x-20135401.jpg">
+                                <!-- <div class="card-caption"> Quisque a bibendum magna </div> -->
+                            </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="table">
+                            <h6 class="category text-info">1000 calo mỗi ngày</h6>
+                            <p class="card-description">  Thực đơn ăn kiêng 7 ngày trong tuần giảm cân hiệu quả. </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="{% url 'paper_lg(2)' %}"> <img class="img" src="http://localhost:8000/static/images/vegan(1).jpg">
+                                <!-- <div class="card-caption"> Quisque a bibendum magna </div> -->
+                            </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="table">
+                            <h6 class="category text-info">Món chay</h6>
+                            <p class="card-description"> Ăn chay trường nhưng vẫn phải đảm bảo sức khoẻ cho người trong gia đình. </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-blog">
+                        <div class="card-image">
+                            <a href="{% url 'weightgainpaper' %}"> <img class="img" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+                                <!-- <div class="card-caption"> Quisque a bibendum magna </div> -->
+                            </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="table">
+                            <h6 class="category text-info">Thực đơn tăng cân</h6>
+                            <p class="card-description"> Top 3 Thực Đơn Tăng Cân Cho Người Gầy Trong 1 Tuần Chi Tiết Nhất </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock %}

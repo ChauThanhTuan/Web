@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Giảm cân{% endblock %}
+{% block menu %}active{% endblock %}
+{% block content %}
+<div class="mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="/">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="{% url 'menu' %}">Menu</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none" href="{% url 'lossgain' %}">Loss Gain</a></li>
+            <li class="breadcrumb-item" aria-current="page">Loss Gain</li>
+        </ol>
+    </nav>
+</div>
+<section class="p-3 p-lg-0 pt-lg-3 text-center text-sm-start">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <div class="block-heading">
+                        <h1 class="text-center text-danger"><strong>THỰC ĐƠN ĂN CHAY HÀNG NGÀY 7 NGÀY TRONG TUẦN ĐẦY ĐỦ CHẤT DINH DƯỠNG, ĂN CHAY MỘT CÁCH KHOA HỌC</strong></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+</head>
+
+<body>
+    <div class="main">
+
+        <form action="" method="POST" class="form" id="form-1">
+          <h3 class="heading">Đăng nhập</h3>
+          <p class="desc">Group's name</p>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message"></span>
+          </div>
+
+          <button class="form-submit">Đăng nhập</button>
+          
+          <div>
+            Chưa có tài khoản?
+            <a href="{% url 'register' %}">Đăng ký</a>
+          </div>
+        </form>
+
+      </div>
+
+    <script src="{% static '/scripts/Validator.js' %}"></script>
+    
+    <script>
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#email', 'Vui lòng nhập email'),
+          Validator.isEmail('#email'),
+          Validator.isRequired('#password', 'Vui lòng nhập mật khẩu'),
+          Validator.minLength('#password', 8),
+        ],
+        onSubmit: function (data) {
+          console.log(data);
+        }
+      });
+    </script>
+</body>
+
+</html>

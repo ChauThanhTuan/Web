@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Suggest suitable diet{% endblock %}
+
+<!-- Begin content -->
+{% block content %}
+<div id="content">
+    <div id="intro">
+        <h1>
+            HEALTHY <br> 
+            EATING
+        </h1>
+
+        <h2>
+            Confused by all the conflicting nutrition advice out there?<br>
+            These simple tips can show you how to plan, enjoy and stick to a healthy diet.
+        </h2>
+    </div>
+    
+    <div id="content-background">
+        
+    </div>
+</div>
+{% endblock %}
+<!-- End content -->
+
+<!-- Begin slider -->
+{% block slider %}
+<div id="slider">
+    <div id="slider-imgs">
+        <input type="radio" name="slider-radio" id="slider-radio_1" checked>
+        <input type="radio" name="slider-radio" id="slider-radio_2">
+        <input type="radio" name="slider-radio" id="slider-radio_3">
+        <input type="radio" name="slider-radio" id="slider-radio_4">
+        <input type="radio" name="slider-radio" id="slider-radio_5">
+
+        <div class="slider-img selected">
+            <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528" alt="">
+        </div>
+        <div class="slider-img selected">
+            <img src="https://lml.vn/wordpress/wp-content/uploads/2020/03/cach-seo-tren-shopee-hieu-qua.jpg" alt="">
+        </div>
+        <div class="slider-img">
+            <img src="https://unix.edu.vn/wp-content/uploads/2020/12/timetablelogo_compress26-768x442.jpg" alt="">
+        </div>
+        <div class="slider-img">
+            <img src="https://cdn.tgdd.vn/hoi-dap/1347262/check-out-la-gi-kien-thuc-a-z-ve-check-out-trong-linh-vuc%20(4)-800x600.jpg" alt="">
+        </div>
+        <div class="slider-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCTG7tbU86XEgprQp1QCIVs_MKp3fktJExA&usqp=CAU" alt="">
+        </div>
+    </div>
+    
+    <div id="slider-nav"> 
+        <label for="slider-radio_1" class="slider-bar"></label>
+        <label for="slider-radio_2" class="slider-bar"></label>
+        <label for="slider-radio_3" class="slider-bar"></label>
+        <label for="slider-radio_4" class="slider-bar"></label>
+        <label for="slider-radio_5" class="slider-bar"></label>
+    </div>
+</div>
+{% endblock %}
+<!-- End content -->

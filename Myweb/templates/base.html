@@ -1,0 +1,284 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href={% block css %}{% endblock %}>
+        <link rel="stylesheet" href="{% static '/icon/fontawesome-free-5.14.0-web/css/all.min.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Are+You+Serious&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="main">
+            <!-- Begin header -->
+            <div id="header">
+                <!-- Begin nav -->
+                <ul id="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#content">About</a></li>
+                    <li><a href="/#slider">Service</a></li>
+                    <li><a href="/#footer">Contact</a></li>
+                    <li id="nav-menu">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </li>
+                </ul>
+                <!-- End nav -->
+
+                <!-- Begin header button -->
+                <ul>
+                    <!-- Begin user-circle button -->
+                    <li class="nav-user-icon header-btn">
+                        <a href="{% url 'register' %}">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                    </li>
+                    <!-- End user-circle button -->
+                    
+                    <!-- Begin bell button -->
+                    <li class="nav-bell-icon header-btn">
+                        <a href="">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                    </li>
+                    <!-- End bell button -->
+                    
+                    <!-- Begin search button -->
+                    <li class="nav-search-icon header-btn">
+                        <a href="">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <!-- End search button -->
+                </ul>
+                <!-- End header button -->
+                
+                <!-- Begin menu -->
+                <form class="menu">
+                    <!-- Begin menu header -->
+                    <div class="menu-header">
+                        <ul>
+                            <li class="menu-header-groupname">
+                                <a href="">Group's name</a>
+                            </li>
+                            
+                            <li class="menu-header-nav">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="">
+                                            Subscribe
+                                            <i class="fal fa-external-link"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="">
+                                            <i class="fal fa-external-link"></i>
+                                            Join Now
+                                            <i class="fas fa-caret-down"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="" style="padding: 0 35px;">
+                                            Login
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End menu header -->
+                    
+                    <!-- Begin options -->
+                    <div class="options">
+                        <ul>
+                            <li>
+                                Search
+                                <input type="text" class="search" placeholder="Enter search term">
+                            </li>
+                            <li><a href="#" id="optionsMealsCooking" class="mealplansType">
+                                Meals & Cooking
+                                <i class="fas fa-angle-right menu-options-more"></i>
+                            </a></li>
+                            <li><a href="#" id="optionsFoodNews" class="mealplansType">Food News</a></li>
+                            <li><a href="#" id="optionsHolidays" class="mealplansType">
+                                Holidays
+                                <i class="fas fa-angle-right menu-options-more"></i>
+                            </a></li>
+                            <li><a href="#" id="optionsSpecialDiets" class="mealplansType">
+                                Special Diets
+                                <i class="fas fa-angle-right menu-options-more"></i>
+                            </a></li>
+                            <li><a href="#" id="optionsHealthyMealPlans" class="mealplansType">
+                                Healthy Meal Plans
+                                <i class="fas fa-angle-right menu-options-more"></i>
+                            </a></li>
+                            <li><a href="#" id="optionsHealthyLifestyle" class="mealplansType">Healthy Lifestyle</a></li>
+                        </ul>
+                    </div>
+                    <!-- End options -->
+
+                    <div class="sub-options">
+                        <div id="MealsCooking" class="hidden">
+                            <ul>
+                                <li><a href="">link1</a></li>
+                                <li><a href="">link2</a></li>
+                                <li><a href="">link3</a></li>
+                                <li><a href="">link4</a></li>
+                                <li><a href="">link5</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="FoodNews" class="hidden">
+                            <ul>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="Holidays" class="hidden">
+                            <ul>
+                                <li><a href="">testttttt1</a></li>
+                                <li><a href="">testttttt2</a></li>
+                                <li><a href="">testttttt3</a></li>
+                                <li><a href="">testttttt4</a></li>
+                                <li><a href="">testttttt5</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="SpecialDiets" class="hidden">
+                            <ul>
+                                <li><a href="">link1</a></li>
+                                <li><a href="">link2</a></li>
+                                <li><a href="">link3</a></li>
+                                <li><a href="">link4</a></li>
+                                <li><a href="">link5</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="HealthyMealPlans">
+                            <ul>
+                                <li><a href="{% url 'HealthyMealPlans_WeightLoss' %}">WeightLoss Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_Vegan' %}">Vegan Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_Diabetes' %}">Diabetes Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_Cholesterol' %}">Low Cholesterol Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_Pregnancy' %}">Pregnancy Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_HeartHealthy' %}">HeartHealthy Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_Dinner' %}">Dinner Meal Plans</a></li>
+                                <li><a href="{% url 'HealthyMealPlans_HealthyKid' %}">HealthyKid Meal Plans</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="HealthyLifestyle" class="hidden">
+                            <ul>
+                                <li><a href="">abcdef1</a></li>
+                                <li><a href="">abcdef2</a></li>
+                                <li><a href="">abcdef3</a></li>
+                                <li><a href="">abcdef4</a></li>
+                                <li><a href="">abcdef5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+                <!-- End menu -->
+                
+            </div>
+            <!-- End header -->
+
+            {% block navbar %}{% endblock %}
+
+            {% block content %}{% endblock %}
+
+            {% block slider %}{% endblock %}
+
+            <!-- Begin footer -->
+            <div id="footer">
+                <div id="about">
+                    <ul>
+                        <li>
+                            Châu Thanh Tuấn <br>
+                            <a href="">19522463@gm.uit.edu.vn</a>
+                        </li>
+
+                        <li>
+                            Nguyễn Văn Tài <br>
+                            <a href="">19522050@gm.uit.edu.vn</a>
+                        </li>
+
+                        <li>
+                            Trần Quốc Phong <br>
+                            <a href="">19522013@gm.uit.edu.vn</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="contact">
+                    <ul>
+                        <li>
+                            Contact advertising <br>
+                            <a href="">groupname@gmail.com</a>
+                        </li>
+
+                        <li>
+                            We Are Hiring! <br>
+                            <a href="">0123456789</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="others">
+                    <a href="">Privacy & Cookie</a> <br>
+                    &#169; 2021 groupname
+                </div>
+            </div>
+            <!-- End footer -->
+        </div>
+
+    </body>
+        
+    <script src="{% static '/scripts/Event.js' %}"></script>
+    
+</html>
