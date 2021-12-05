@@ -1,0 +1,284 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, Helvetica,Arial, sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+#main {
+    height: 1300px;
+}
+
+#header {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 2;
+}
+
+#nav {
+    /* display: inline-block; */
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a,
+#nav li:last-child {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a,
+#nav li:last-child {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0px 25px;
+    display: inline-block;
+    cursor: pointer;    
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+#header .header-btn {
+    display: block;
+    top: -50px;
+    position: relative;
+}
+
+#header .header-btn a{
+    font-size: 20px;
+    float: right;
+    line-height: 50px;
+    padding: 0px 15px;
+    color: #fff;
+}
+
+#header .header-btn:hover a{
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .menu {
+    margin: 75px 75px;
+    width: 1000px;
+    height: 500px;
+    left: 125px;
+    position: relative;
+    color: black;
+    background-color: #fff;
+    display: none;
+}
+
+#header .menu-header {
+    width: 100%;
+    text-decoration: none;
+    line-height: 50px;
+    padding-left: 60px;
+    display: inline-block;
+}
+
+#header .menu-header li {
+    display: inline-block;
+}
+
+#header .menu-header-groupname a{
+    font-family: 'Are You Serious', cursive;
+    font-size: 30px;
+    color: rgb(0, 255, 55);
+    text-decoration: none;
+}
+
+#header .menu-header-nav {
+    float: right;
+}
+
+#header .menu-header-nav li a{
+    padding: 0px 12px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+#header .menu-header-nav li:hover a{
+    background-color: yellow;
+}
+
+#header .menu .options {
+    width: 25%;
+    padding: 0;
+    border: 0;
+    border-right-width: 5px;
+    border-style: solid;
+    border-color: rgba(29, 191, 110, 0.719);
+}
+
+#header .options li:first-child {
+    padding: 0px 25px;
+}
+
+#header .menu .options .search {
+    height: 32px;
+    font-size: 16px;
+    width: 200px;
+    padding: 0px 20px;
+    margin-top: 10px;
+}
+
+#header .menu .options .search:hover{
+    border-color: #1dbfaf;
+}
+
+#header .menu .options ul {
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+#header .menu .options li{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    display: block;
+}
+
+#header .menu .options li a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .menu .options li:hover a {
+    background-color: #1dbfaf;
+}
+
+#header .menu .sub-options {
+    width: 75%;
+    left: 25%;
+    top: 55px;
+    position: absolute;
+    display: flex;
+}
+
+#header .menu .sub-options li {
+    width: 50%;
+    top: 100px;
+    float: left;
+    padding-left: 100px;
+    margin: 12px 0;
+    font-size: 20px;
+    display: block;
+}
+
+#header .menu .sub-options a {
+    color: black;
+    text-decoration: none;
+}
+
+#header .menu .sub-options a:hover {
+    color: red;
+}
+
+#content {
+    width: 100%;
+    height: 650px;
+    top: 50px;
+    position: relative;
+}
+
+#content #intro {
+    width: 60%;
+    height: 650px;
+    left: 50px;
+    padding: 150px 50px;
+    position: absolute;
+}
+
+#content #intro h1 {
+    font-size: 80px;
+}
+
+#content #content-background {
+    width: 40%; 
+    height: 650px;
+    left: 60%;
+    top: 80px;
+    background-image: url("../images/soup.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#slider {
+    width: 100%;
+    height: 400px;
+    top: 50px;
+    bottom: 200px;
+    position: relative;
+    background-color: pink;
+    text-align: center;
+}
+
+#footer {
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    z-index: 1;
+}
+
+#footer a {
+    text-align: justify;
+    color:  #1dbfaf
+}
+
+#footer #about {
+    width: 50%;
+    top: 30px;
+    padding-left: 12%;
+    box-sizing: content;
+    border-right: 1px solid white;
+    position: absolute;
+}
+
+#footer #contact {
+    width: 50%;
+    top: 40px;
+    left: 50%;
+    padding-left: 12%;
+    box-sizing: content;
+    display: block;
+    position: absolute;
+}
+
+#footer #others {
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    position: absolute;
+}

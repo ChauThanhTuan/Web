@@ -6,4 +6,3 @@ class FeedbackForm(forms.Form):
     fromEmail = forms.EmailField(max_length=50)
     subject = forms.CharField(max_length=50)
     message = forms.CharField(widget=forms.Textarea)
-
