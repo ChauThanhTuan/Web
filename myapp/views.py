@@ -47,6 +47,9 @@ def about_view(request):
 #Service
 def service_view(request):
     return render(request, 'service.html')
+
+# def search_view(request):
+#     return render(request, 'search.html')
 #Contact
 # def contact_view(request):
 #     return render(request, 'contact.html')
@@ -61,15 +64,24 @@ def loss_gain_paper_1_view(request):
     return render(request, 'main/loss_gain/LG(1).html')
 def loss_gain_paper_2_view(request):
     return render(request, 'main/loss_gain/LG(2).html')
-
 def loss_gain_paper_3_view(request):
     return render(request, 'main/loss_gain/LG(3).html')
+def loss_gain_paper_4_view(request):
+    return render(request, 'main/loss_gain/LG(4).html')
+def loss_gain_paper_5_view(request):
+    return render(request, 'main/loss_gain/LG(5).html')
+def loss_gain_paper_6_view(request):
+    return render(request, 'main/loss_gain/LG(6).html')
 
 #begin vegan
 def vegan_view(request):
     return render(request, 'main/vegan/vegan.html')
 def vegan_paper_1_view(request):
     return render(request, 'main/vegan/vegan(1).html')
+def vegan_paper_2_view(request):
+    return render(request, 'main/vegan/vegan(2).html')
+def vegan_paper_3_view(request):
+    return render(request, 'main/vegan/vegan(3).html')
 
 #Begin other
 def other_view(request):
