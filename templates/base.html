@@ -76,7 +76,7 @@
             <div class="container my-5 w-100 mycontainer">
                 <div id="mylist" class="card p-3">
                     <div class="row m-3">
-                        <div class="col-10">
+                        <div class="col-10 mt-2">
                             <input type="search" class="search form-control" placeholder="Search...">
                         </div>
                         <div class="col-2 tlink-right">
@@ -134,21 +134,39 @@
                     },
                     {
                         name: "THỰC ĐƠN GIẢM CÂN 800 - 1500 CALO",
-                        description: "Thực đơn giảm cân cho nữ",
+                        description: "Thực đơn giảm cân với những mức calo cụ thể, thích hợp với những phụ nữ muốn giảm cân nhanh chóng và hiệu quả.",
                         link: "{% url 'paper_lg(3)' %}",
                         date: "2021/10/3",
+                    },
+                    {
+                        name: "THỰC ĐƠN GIẢM CÂN CHO NỮ",
+                        description: "Thực đơn giảm cân cho nữ với những món ăn vừa đảm bảo dinh dưỡng vừa không ảnh hưởng đến kế hoạch giảm cân.",
+                        link: "{% url 'paper_lg(4)' %}",
+                        date: "2021/11/25",
+                    },
+                    {
+                        name: "THỰC ĐƠN EAT CLEAN",
+                        description: "Thực đơn eat clean giá rẻ dành cho học sinh, sinh viên giảm cân hiệu quả và hợp lý",
+                        link: "{% url 'paper_lg(5)' %}",
+                        date: "2021/10/25",
+                    },
+                    {
+                        name: "THỰC ĐƠN GIẢM CÂN 7 NGÀY \"CHUẨN\" KHOA HỌC",
+                        description: "Thực đơn giảm cân vừa đảm bảo chất dinh dưỡng vừa giảm cân hiệu quả, phù hợp với chế độ dinh dưỡng khoa học",
+                        link: "{% url 'paper_lg(6)' %}",
+                        date: "2021/10/17",
                     },
                     {
                         name: "LƯỢNG CALO TRONG MỖI LOẠI THỰC PHẨM",
                         description: "Calo không chỉ là mức đo năng lượng của thực phẩm. Khái niệm này còn được mở rộng hơn nữa khi chỉ mức độ cân bằng dinh dưỡng.",
                         link: "{% url 'other_paper(1)' %}",
-                        date: "2020/1/4",
+                        date: "2020/11/4",
                     },
                     {
                         name: "THỰC PHẨM GIÚP CẢI THIỆN CHIỀU CAO TRẺ EM",
                         description: "Mặc dù chiều cao phụ thuộc phần lớn vào di truyền, nhưng việc bổ sung đủ chất dinh dưỡng trong chế độ ăn uống của bạn là hoàn toàn cần thiết",
                         link: "{% url 'other_paper(2)' %}",
-                        date: "2021/4/5",
+                        date: "2021/12/5",
                     },
                     {
                         name: "THỰC PHẨM TỐT CHO SỨC KHỎE GIÁ RẺ",
@@ -160,19 +178,61 @@
                         name: "NHỮNG LOẠI TRÁI CÂY CẦN BỔ SUNG VÀO CHẾ ĐỘ ĂN UỐNG",
                         description: "Trái cây chứa nhiều vitamin, khoáng chất, chất xơ và các hợp chất thực vật được gọi là dinh dưỡng thực vật.",
                         link: "{% url 'other_paper(4)' %}",
+                        date: "2021/11/17",
+                    },
+                    {
+                        name: "THỰC PHẨM GIẢM CÂN HIỆU QUẢ CHO CƠ THỂ",
+                        description: "Lựa chọn những loại thực phẩm đóng vai trò quyết định trong những bài giảm cân hiệu quả mà vẫn đầy đủ dinh dưỡng.",
+                        link: "{% url 'other_paper(5)' %}",
                         date: "2021/5/7",
+                    },
+                    {
+                        name: "THỰC PHẨM HẠN CHẾ HẤP THU",
+                        description: "Thực phẩm là nguồn dinh dưỡng thiết yếu cho sức khỏe. Tuy nhiên, không phải thực phẩm nào cũng tốt và tiêu thụ bao nhiêu cũng được.",
+                        link: "{% url 'other_paper(6)' %}",
+                        date: "2021/11/7",
+                    },
+                    {
+                        name: "BỔ SUNG DƯỠNG CHẤT CHO TRẺ EM",
+                        description: "Trong thời gian phát triển của trẻ nhỏ, cung cấp những loại thực phẩm dinh dưỡng và an toàn ảnh hưởng rất lớn đến cơ thể.",
+                        link: "{% url 'other_paper(7)' %}",
+                        date: "2021/12/1",
                     },
                     {
                         name: "THỰC ĐƠN ĂN CHAY HÀNG NGÀY 7 NGÀY TRONG TUẦN ĐẦY ĐỦ CHẤT DINH DƯỠNG, ĂN CHAY MỘT CÁCH KHOA HỌC",
                         description: "Ăn chay hay ăn mặn bạn vẫn phải đảm bảo dinh dưỡng trong khẩu phần thực đơn hàng ngày.",
                         link: "{% url 'vegan_paper(1)' %}",
-                        date: "2021/7/8",
+                        date: "2021/11/8",
                     },
                     {
-                        name: "Thực đơn tăng cân cho người gầy kinh niên Tăng 3kg trong 1 tuần",
+                        name: "MÓN CHAY BỔ DƯỠNG CHO NGƯỜI ĂN CHAY TRƯỜNG",
+                        description: "Lựa chọn những món ăn chay cho gia đình đảm bảo được độ dinh dưỡng cũng như sự thanh tịnh trong mỗi món ăn",
+                        link: "{% url 'vegan_paper(2)' %}",
+                        date: "2021/11/28",
+                    },
+                    {
+                        name: "THIẾT KẾ THỰC ĐƠN ĂN CHAY ĐÚNG VÀ ĐỦ",
+                        description: "Thiết kế một thực đơn ăn chay phải có sự lựa chọn và xem xét tỉ mỉ giữa các loại thực phẩm để có thể đem lại một thực đơn hợp lý nhất.",
+                        link: "{% url 'vegan_paper(3)' %}",
+                        date: "2021/11/13",
+                    },
+                    {
+                        name: "THỰC ĐƠN TĂNG CÂN CHO NGƯỜI GẦY KINH NIÊN TĂNG 3KG TRONG 1 TUẦN",
                         description: "Bạn đang muốn tăng cân cấp tốc… Nhưng ăn mãi mà vẫn không mập không tăng cân được",
                         link: "{% url 'weightgainpaper' %}",
-                        date: "2021/8/9",
+                        date: "2021/10/29",
+                    },
+                    {
+                        name: "TOP 3 THỰC ĐƠN TĂNG CÂN CHO NGƯỜI GẦY TRONG 1 TUẦN CHI TIẾT NHẤT",
+                        description: "Những thực đơn đem lại cho bạn kết quả trên cả tuyệt vời trong quá trình cải thiện cân nặng của mình",
+                        link: "{% url 'weightgainpaper(1)' %}",
+                        date: "2021/11/30",
+                    },
+                    {
+                        name: "TOP 21 SIÊU THỰC PHẨM TĂNG CÂN CHO NGƯỜI GẦY",
+                        description: "Những siêu thực phẩm giúp đẩy nhanh quá trình tăng cân của bạn một cách hiệu quả và an toàn",
+                        link: "{% url 'weightgainpaper(2)' %}",
+                        date: "2021/11/26",
                     },
                 ]
         

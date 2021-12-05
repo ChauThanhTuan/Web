@@ -48,7 +48,8 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row">
-            <h1 class="fs-5 text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Chào mừng đến với thiên đường của những bữa ăn hợp lý !</h1>
+            <!-- style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" -->
+            <h1 class="text-center text-primary"><strong>CHÀO MỪNG ĐẾN WEBSITE!</strong>!</h1>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -57,7 +58,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <div class="testimony-wrap d-md-flex">
-                                    <div class="img" style="background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Fimage%2F1511p102-diet-good-bad-calories.jpg%3Fitok%3DpXN_1iMK);"></div>
+                                    <div class="img d-none d-md-block" style="background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Fimage%2F1511p102-diet-good-bad-calories.jpg%3Fitok%3DpXN_1iMK);"></div>
                                     <div class="text text-center p-4 py-xl-5 px-xl-5 d-flex align-items-center">
                                         <div class="desc w-100">
                                             <p class="h3 mb-5">"Tìm hiểu lượng calo và dinh dưỡng trong các loại thực phẩm thường dùng.</p>
@@ -87,7 +88,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="img" style="background-image: url(https://image.freepik.com/free-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg);"></div>
+                                    <div class="img d-none d-md-block" style="background-image: url(https://image.freepik.com/free-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg);"></div>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +98,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <div class="testimony-wrap d-md-flex">
-                                    <div class="img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTATn-WZXxquuKDIPuozJZWqQM2xtj9q9MlQe0k_92xckwdu9gkNNISzTWfB7LJohO1qSA&usqp=CAU);"></div>
+                                    <div class="img d-none d-md-block" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTATn-WZXxquuKDIPuozJZWqQM2xtj9q9MlQe0k_92xckwdu9gkNNISzTWfB7LJohO1qSA&usqp=CAU);"></div>
                                     <div class="text text-center p-4 py-xl-5 px-xl-5 d-flex align-items-center">
                                         <div class="desc w-100">
                                             <p class="h3 mb-5">"Cung cấp những kiến thức cần thiết cho một bữa ăn khoa học hợp lý và đầy đủ chất dinh dưỡng.</p>
@@ -124,13 +125,14 @@
     <div class="cards-1 section-gray">
         <div class="container">
             <div class="row text-center pb-3 fs-4 ">
-                <h1 class="text-primary"  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Một số bài viết tiêu biểu</h1>
+                <!--   style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" -->
+                <h1 class="text-primary"> Một số bài viết tiêu biểu</h1>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card card-blog">
                         <div class="card-image">
-                            <a href="{% url 'paper_lg(1)' %}"> <img class="img" src="https://image.phunuonline.com.vn/news/2018/20180725/fckimage/134449_img-6008-1200x-20135401.jpg">
+                            <a href="{% url 'paper_lg(1)' %}"> <img class="img-fluid" src="https://image.phunuonline.com.vn/news/2018/20180725/fckimage/134449_img-6008-1200x-20135401.jpg">
                                 <!-- <div class="card-caption"> Quisque a bibendum magna </div> -->
                             </a>
                             <div class="ripple-cont"></div>
@@ -152,7 +154,7 @@
                         </div>
                         <div class="table">
                             <h6 class="category text-info">Món chay</h6>
-                            <p class="card-description"> Ăn chay trường nhưng vẫn phải đảm bảo sức khoẻ cho người trong gia đình. </p>
+                            <p class="card-description"> Đảm bảo sức khoẻ cho người trong gia đình với thực đơn chay. </p>
                         </div>
                     </div>
                     
@@ -167,7 +169,7 @@
                         </div>
                         <div class="table">
                             <h6 class="category text-info">Thực đơn tăng cân</h6>
-                            <p class="card-description"> Top 3 Thực Đơn Tăng Cân Cho Người Gầy Trong 1 Tuần Chi Tiết Nhất </p>
+                            <p class="card-description">Thực Đơn Tăng Cân Cho Người Gầy Trong 1 Tuần Chi Tiết </p>
                         </div>
                     </div>
                     

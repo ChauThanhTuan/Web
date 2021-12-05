@@ -17,16 +17,16 @@
                     <p class="lead my-4">
                         Bạn đang có một thân hình gầy và bạn muốn tăng cân nhưng không biết tăng cân như nào là hợp lý. Đừng lo chúng tôi đưa ra lời khuyên giúp bạn có bạn kế hoạch tăng cân một cách khoa học.
                     </p>
-                    <button
-                    class="btn btn-primary btn-lg"
-                    data-bs-toggle="modal"
-                    data-bs-target="#enroll"
-                >
-                    Đăng ký tài khoản
-                    </button>
+                    <a href="{% url 'login' %}">
+                        <button
+                        class="btn btn-primary btn-lg"
+                    >
+                        Đăng nhập
+                        </button>
+                    </a>
             </div>
             <img
-                class="img-fluid w-50 d-none d-sm-block"
+                class="img-fluid w-50 d-none d-md-block"
                 src="{% static '/images/lost_gain(1).jpg' %}"
                 alt=""
                 />
@@ -59,7 +59,7 @@
                 <p> <i>Chất xơ:</i> Trong rau củ, trái cây có chứa nhiều chất xơ, chất này hỗ trợ tiêu hóa, ngăn ngừa táo bón, tốt cho hệ đường ruột.</p>
             </div>
             <div class="col">
-                <img class="img-fluid w-100" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/USDA_Food_Pyramid.gif" alt="">
+                <img class="img-fluid w-100 d-none d-md-block" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/USDA_Food_Pyramid.gif" alt="">
             </div>
         </div>
         <div class="row">
@@ -67,7 +67,7 @@
             <div class="col mx-3">
                 <p>Ngủ đủ giấc và sâu giấc giúp phục hồi cơ thể và đào thải độc tố , thúc đẩy quá trình trao đổi chất diễn ra nhanh hơn. Ngủ trước 10 giờ và đủ 8 tiếng mỗi ngày kết hợp với chế độ ăn giàu dưỡng chất là “chìa khóa” để tăng cân một cách hiệu quả và nhanh chóng.</p>
                <div class="d-flex justify-content-center mb-3">
-                <img class="w-50" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F38%2F2014%2F10%2F20%2Fshutterstock_420756877.jpg&q=85" alt=""> 
+                <img class="w-50 img-fluid d-none d-md-block" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F38%2F2014%2F10%2F20%2Fshutterstock_420756877.jpg&q=85" alt=""> 
                </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                 </p>
             </div>
             <div class="col">
-                <img class="img-fluid w-75" src="{% static '/images/excercise.jpg' %}" alt="">
+                <img class="img-fluid w-75 d-none d-md-block" src="{% static '/images/excercise.jpg' %}" alt="">
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
             <div class="col-12">
                 <div class="block">
                     <div class="block-heading">
-                        <h2 class="display-6 text-center text-primary"><strong>Một Số Bài Viết</strong></h2>
+                        <h2 class="display-6 text-center text-primary"><strong>THỰC ĐƠN ĐỀ XUẤT</strong></h2>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Thực đơn tăng cân</h5>
-                                <p class="card-text">Thực đơn tăng cân cho người gầy kinh niên Tăng 3kg trong 1 tuần.</p>
+                                <p class="card-text">THỰC ĐƠN TĂNG CÂN CHO NGƯỜI GẦY.</p>
                                 <!-- <button type="button" class="btn btn-info w-100">Tìm hiểu thêm</button> -->
                                 <a href="{% url 'weightgainpaper' %}" class="btn btn-outline-dark">Chi tiết</a>
                             </div>
@@ -121,8 +121,8 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural.</p>
+                                <h5 class="card-title">Thực đơn tăng cân</h5>
+                                <p class="card-text">TOP THỰC ĐƠN TĂNG CÂN CHO NGƯỜI GẦY.</p>
                                 <!-- <button type="button" class="btn btn-info w-100">Tìm hiểu thêm</button> -->
                                 <a href="{% url 'weightgainpaper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
                             </div>
@@ -139,8 +139,8 @@
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural.</p>
+                                <h5 class="card-title">Thực đơn tăng cân</h5>
+                                <p class="card-text">SIÊU THỰC PHẨM TĂNG CÂN CHO NGƯỜI GẦY.</p>
                                 <!-- <button type="button" class="btn btn-info w-100">Tìm hiểu thêm</button> -->
                                 <a href="{% url 'weightgainpaper(2)' %}" class="btn btn-outline-dark">Chi tiết</a>
                             </div>
@@ -155,8 +155,8 @@
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural.</p>
+                                <h5 class="card-title">Thực đơn tăng cân</h5>
+                                <p class="card-text">THỰC ĐƠN BỔ SUNG 3000 CALO </p>
                                 <!-- <button type="button" class="btn btn-info w-100">Tìm hiểu thêm</button> -->
                                 <a href="{% url 'weightgainpaper' %}" class="btn btn-outline-dark">Chi tiết</a>
 

@@ -13,16 +13,16 @@
                     <p class="lead my-4">
                         Chúng tôi tập trung về những loại thực phẩm phù hợp với quá trình ăn kiêng đồng thời cung cấp những thực đơn để bạn có thể lựa chọn hợp lý cho khả năng của bản thân.
                     </p>
-                    <button
-                    class="btn btn-primary btn-lg"
-                    data-bs-toggle="modal"
-                    data-bs-target="#enroll"
-                >
-                    Đăng ký tài khoản
-                    </button>
+                    <a href="{% url 'login' %}">
+                        <button
+                        class="btn btn-primary btn-lg"
+                    >
+                        Đăng nhập
+                        </button>
+                    </a>
             </div>
             <img
-                class="img-fluid w-50 d-none d-sm-block"
+                class="img-fluid w-50 d-none d-md-block"
                 src="{% static '/images/lost_gain(1).jpg' %}"
                 alt=""
                 />
@@ -42,7 +42,7 @@
                 <p>Với kế hoạch ăn uống ít carb, bạn sẽ tận dụng việc đốt cháy chất béo dự trữ để lấy năng lượng thay vì carbs. Nếu bạn chọn ăn nhiều carbs phức tạp hơn như ngũ cốc nguyên hạt cùng với sự thâm hụt calo , bạn sẽ được hưởng lợi từ chất xơ cao hơn và tiêu hóa chúng chậm hơn. Điều này làm cho họ cảm thấy no hơn để giữ cho bạn hài lòng.</p>    
             </div>
             <div class="col">
-                <img class="img-fluid w-75 d-none d-sm-block" src="{% static '/images/carbs.jpg' %}" alt="">
+                <img class="img-fluid w-75 d-none d-md-block" src="{% static '/images/carbs.jpg' %}" alt="">
             </div>
             <blockquote class="summary bg-light mx-5 pt-2">
                 <h3><strong class="text-danger">Tóm tắt</strong></h3>
@@ -64,7 +64,7 @@
                         </p>
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid d-none d-sm-block" src="{% static '/images/gain(2).jpg' %}" alt="" width="60%">
+                        <img class="img-fluid d-none d-md-block" src="{% static '/images/gain(2).jpg' %}" alt="" width="60%">
                     </div>
                 </div>
                 <h3>Chất đạm</h3>
@@ -123,7 +123,7 @@
                 <p>Cố gắng đến phòng tập thể dục ba đến bốn lần trong một tuần để nâng tạ. Nếu bạn mới tập gym, hãy nhờ huấn luyện viên cho một số lời khuyên. Đảm bảo rằng bác sĩ của bạn cũng biết về bất kỳ kế hoạch tập thể dục mới nào.</p>    
             </div>
             <div class="col">
-                <img class="img-fluid w-75 d-none d-sm-block" src="{% static '/images/excercise.jpg' %}" alt="">
+                <img class="img-fluid w-75 d-none d-md-block" src="{% static '/images/excercise.jpg' %}" alt="">
             </div>
             <blockquote class="summary bg-light mx-5 pt-2">
                 <h3><strong class="text-danger">Tóm tắt</strong></h3>
