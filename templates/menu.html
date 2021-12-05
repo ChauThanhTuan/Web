@@ -32,7 +32,7 @@
         </div>
         <div class="row my-5 align-items-center justify-content-center">
             <div class="col-8 col-lg-4 col-xl-3">
-                <a href="#">
+                <a href="{% url 'weightgainpaper' %}">
                     <div class="card border-0">
                         <div class="card-body text-center py-4">
                             <h4 class="card-title">Tăng cân</h4>
@@ -59,7 +59,7 @@
 
             <div class="col-8 col-lg-4 col-xl-3">
                 <div class="card border-0">
-                    <a href="#">
+                    <a href="{% url 'vegan_paper(2)' %}">
                         <div class="card-body text-center py-4">
                             <h4 class="card-title">Ăn chay</h4>
                             <p class="lead card-subtitle">Giúp cơ thể khỏe mạnh và giảm cân an toàn</p>
@@ -371,7 +371,7 @@
             <p class="card-text">
               Những phương pháp tăng cân nhanh và an toàn, phù hợp với từng lứa tuổi.
             </p>
-            <a href="#" class="btn btn-primary">Đọc thêm</a>
+            <a href="{% url 'weightgain' %}" class="btn btn-primary">Đọc thêm</a>
           </div>
         </div>
       </div>
@@ -449,9 +449,9 @@
           <div class="text-center">
             <h5 class="text-uppercase py-2">Chế độ giảm cân (nữ)</h5>
             <p class="">
-              Thực đơn giảm cân cho nữ hàng ngày ngon miệng dễ thực hiện.
+              Thực đơn giảm cân cho nữ hàng ngày dễ thực hiện.
             </p>
-            <a href="{% url 'other_paper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
+            <a href="{% url 'paper_lg(4)' %}" class="btn btn-outline-dark">Chi tiết</a>
           </div>
         </div>
       </div>
@@ -479,9 +479,9 @@
           <div class="text-center">
             <h5 class="text-uppercase py-2">Bổ sung 3000 calories</h5>
             <p class="">
-              Thực đơn tăng cân cho nam vừa đơn giản vừa hiệu quả.
+              Thực đơn tăng cân cho nam đơn giản hiệu quả.
             </p>
-            <a href="{% url 'other_paper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
+            <a href="{% url 'weightgainpaper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
           </div>
         </div>
       </div>
@@ -495,7 +495,7 @@
             <p class="">
               Những thực phẩm có thể giúp bạn cao hơn.
             </p>
-            <a href="{% url 'other_paper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
+            <a href="{% url 'other_paper(2)' %}" class="btn btn-outline-dark">Chi tiết</a>
           </div>
         </div>
       </div>
@@ -509,7 +509,7 @@
             <p class="">
               Thực đơn ăn chay đủ chất dinh dưỡng cho người bận rộn.
             </p>
-            <a href="{% url 'other_paper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
+            <a href="{% url 'vegan_paper(2)' %}" class="btn btn-outline-dark">Chi tiết</a>
           </div>
         </div>
       </div>
@@ -524,7 +524,7 @@
             <p class="">
               Thực đơn ăn kiêng healthy giúp chị em eo thon, dáng gọn.
             </p>
-            <a href="{% url 'other_paper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
+            <a href="{% url 'paper_lg(4)' %}" class="btn btn-outline-dark">Chi tiết</a>
           </div>
         </div>
       </div>
@@ -537,29 +537,14 @@
           <div class="text-center">
             <h5 class="text-uppercase py-2">Tiêu tan mỡ bụng</h5>
             <p class="">
-              Thực đơn giảm cân cho nam trong 1 tuần ai cũng thực hiện được.
+              Thực đơn giảm cân cho nam trong 1 tuần.
             </p>
-            <a href="{% url 'other_paper(1)' %}" class="btn btn-outline-dark">Chi tiết</a>
+            <a href="{% url 'paper_lg(5)' %}" class="btn btn-outline-dark">Chi tiết</a>
           </div>
         </div>
       </div>
         
-      <div class="col-md-6 col-12 col-lg-3 mb-4">
-        <div class="border p-3">
-          <div class="text-center">
-            <img width="128px"  src="{% static '/images/calo_1000.jpg' %}" alt="">
-          </div>
-          <div class="text-center">
-            <h5 class="text-uppercase py-2">Tăng 3kg trong 1 tuần</h5>
-            <p class="">
-              Thực đơn tăng cân cho người gầy kinh niên Tăng 3kg trong 1 tuần
-            </p>
-            <a href="{% url 'weightgainpaper' %}" class="btn btn-outline-dark">Chi tiết</a>
-          </div>
-        </div>
-      </div>
-        
-        
+      
     </div>
   </div>
 </section>

@@ -2,59 +2,108 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 import datetime
 
-from .forms import NameForm
 from polls.models import Blog
 
-name = {}
-def get_name(request):
-    global name
+# Test xem có lấy đươc thông tin hay k
+import win32api
+
+# Search feature
+search = ""
+def get_search(request):
+    global search
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = NameForm(request.POST)
+        search = request.POST['search']
+        search = search.upper()
+
+        # Test xem có lấy đươc thông tin hay k
+        
         # check whether it's valid:
-        if form.is_valid():
+        if search:
+            # win32api.MessageBox(0, search, 'title')
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            name = form.cleaned_data
             return HttpResponseRedirect('/result')
+        else:
+            win32api.MessageBox(0, "Giá trị không hợp lệ", 'error')
+            return HttpResponseRedirect(request.path)
 
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = NameForm()
-
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'home.html')
 
 def result(request):
-    blog = Blog.objects.filter(name=name['name']).get()
-    return render(request, 'result.html', {'blog': blog})
+    blog = Blog.objects.filter(title__contains=search).all()
+    return render(request, 'blog.html', {'blog': blog})
 
+# Chức năng đề xuất
+def get_info(request):
+    global search
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        name = request.POST['name']
+        age = int(request.POST['age'])
+        high = int(request.POST['high']) / 100
+        weight = int(request.POST['weight'])
+        BMI = weight / (2 * high)
+        # Tính BMR cho nam
+        BMR = (66.5 + (13.75 * weight) + (5.003 * high) - (6.755 * age))
+        # Tính BMR cho nữ
+        # Test xem có lấy đươc thông tin hay k
+        # win32api.MessageBox(0, "BMI: " + str(BMI) + " BMR: " + str(BMR), 'BMI and BMR')
+        
+        if BMI < 18.5:
+            search = "weight_gain"
+        elif BMI >= 25:
+            search = "loss_gain"
+        else:
+            search = "other"
+
+        return HttpResponseRedirect('/propose')
+        # check whether it's valid:
+        # if search:
+        #     # win32api.MessageBox(0, search, 'title')
+        #     # process the data in form.cleaned_data as required
+        #     # ...
+        #     # redirect to a new URL:
+        #     return HttpResponseRedirect('/bmi')
+        # else:
+        #     win32api.MessageBox(0, "Giá trị không hợp lệ", 'error')
+
+    return render(request, 'service.html')
+
+def propose(request):
+    blog = Blog.objects.filter(topic__contains=search).all()
+    return render(request, 'blog.html', {'blog': blog})
+
+#
 def homeView(request):
     return render(request, 'home.html',
     {
         'now': datetime.datetime.now()
     }
-    )
+)
 
-#Register and Login
-
+# Test
+def test_view(request):
+    return render(request, 'result.html')
 
 #About
 def about_view(request):
     return render(request, 'about.html')
 
-#Service
-def service_view(request):
-    return render(request, 'service.html')
-
-# def search_view(request):
-#     return render(request, 'search.html')
+# #Service
+# def service_view(request):
+#     return render(request, 'service.html')
 #Contact
 # def contact_view(request):
 #     return render(request, 'contact.html')
 
 #Begin menu
+def service_view(request):
+    return render(request, 'service.html')
+
 def menu_view(request):
     return render(request, 'menu.html')
 #Begin loss gain
@@ -101,9 +150,15 @@ def other_paper_6_view(request):
 def other_paper_7_view(request):
     return render(request, 'main/other/other(7).html')
 
+
 #weight gain
 def weight_gain(request):
     return render(request, 'main/weight gain/weight_gain.html')
 def weight_gain_paper(request):
     return render(request, 'main/weight gain/weight_gain_paper.html')
+def weight_gain_paper_1(request):
+    return render(request, 'main/weight gain/weight_gain_paper(1).html')
+def weight_gain_paper_2(request):
+    return render(request, 'main/weight gain/weight_gain_paper(2).html')
+
 

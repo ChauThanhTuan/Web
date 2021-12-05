@@ -4,101 +4,86 @@
 
 {% block css %}{% static '/css/service.css' %}{% endblock %}
 {% block link %} 
+
 <link rel="icon" type="image/png" href="{% static '/images/icons/favicon.ico' %}" />
+<link rel="stylesheet" type="text/css" href="{% static '/vendor/animate/animate.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static '/vendor/css-hamburgers/hamburgers.min.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static '/vendor/select2/select2.min.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static '/css/util.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %} ">
 {% endblock %}
 
 {% block service %}active{% endblock %}
 {% block content %}
 <div class="services pd">
         <div class="container">
+            <h3 class="title">Thông tin của bạn</h3>
+            <div class="row d-flex align-content-center " style=" height: 450px;overflow-x: hidden; background-image: url(https://i.imgur.com/GMmCQHC.png); background-repeat: no-repeat; background-size: 100% 100%">
+
+                <form class="contact1-form validate-form d-flex flex-column " method="post">
+                    {% csrf_token %}
+                    <div class="wrap-input1 validate-input align-self-lg-center" style="max-width: 500px;" data-validate="Name is required">
+                        <input class="input1" type="text" name="name" placeholder="Giới tính">
+                        <span class="shadow-input1"></span>
+                    </div>
+    
+                    <div class="wrap-input1 validate-input align-self-lg-center" style="max-width: 500px;" data-validate="Age is required">
+                        <input class="input1" type="text" name="age" placeholder="Tuổi">
+                        <span class="shadow-input1"></span>
+                    </div>
+    
+                    <div class="wrap-input1 validate-input align-self-lg-center" style="max-width: 500px;" data-validate="High is required">
+                        <input class="input1" type="text" name="high" placeholder="Chiều cao (cm)">
+                        <span class="shadow-input1"></span>
+                    </div>
+    
+                    <div class="wrap-input1 validate-input align-self-lg-center" style="max-width: 500px;" data-validate="weight is required">
+                        <input class="input1" type="text" name="weight" placeholder="Cân nặng (kg)">
+                        <span class="shadow-input1"></span>
+                    </div>
+    
+                    <div class="container-contact1-form-btn align-self-lg-center" style="max-width: 500px;">
+                        <button class="contact1-form-btn" type="submit" data-bs-toggle="modal" data-bs-target="#submit">
+                            <span>
+                                Gửi Ngay
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+    
+        </div>
             <h3 class="title">Dịch vụ của chúng tôi</h3>
             <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-md-8">
-                    <form id="regForm">
-                        <h1 id="register" class="text-secondary">Hãy cho chúng tôi biết một số thông tin liên quan đến bạn?</h1>
-                        <div class="all-steps" id="all-steps"> 
-                            <span class="step">
-                                <i class="fa fa-user"></i>
-                            </span> 
-                            <span class="step">
-                                <i class="fa fa-map-marker"></i>
-                            </span> 
-                            <span class="step">
-                                <i class="fa fa-shopping-bag"></i>
-                            </span> <span class="step">
-                                <i class="fa fa-car"></i>
-                            </span> 
-                            <span class="step">
-                                <i class="fa fa-spotify"></i>
-                            </span> 
-                            <span class="step">
-                                <i class="fa fa-mobile-phone"></i>
-                            </span> 
-                        </div>
-                        <div class="tab">
-                            <h6>Họ và tên?</h6>
-                            <p> <input placeholder="Name..." oninput="this.className = ''" name="fname"></p>
-                        </div>
-                        <div class="tab">
-                            <h6>Độ tuổi?</h6>
-                            <p><input placeholder="Agee..." oninput="this.className = ''" name="dd"></p>
-                        </div>
-                        <div class="tab">
-                            <h6>Chiều cao?</h6>
-                            <p><input placeholder="Height (cm)..." oninput="this.className = ''" name="email"></p>
-                        </div>
-                        <div class="tab">
-                            <h6>Cân nặng?</h6>
-                            <p><input placeholder="Weight..." oninput="this.className = ''" name="uname"></p>
-                        </div>
-                        <div class="tab">
-                            <h6>Nghề nghiệp?</h6>
-                            <p><input placeholder="Vd: Văn phòng..." oninput="this.className = ''" name="uname"></p>
-                        </div>
-
-                        <div class="thanks-message text-center" id="text-message"> <img src="https://media.istockphoto.com/photos/paint-splatter-thank-you-picture-id1132817705" width="100" class="mb-4">
-                            <h3>Thank you for your feedback!</h3> <span>Thanks for your valuable information. It helps us to improve our services!</span>
-                        </div>
-                        <div style="overflow:auto;" id="nextprevious">
-                            <div style="float:right;"> 
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
-                                    <i class="fa fa-angle-double-left"></i>
-                                </button> 
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">
-                                    <i class="fa fa-angle-double-right"></i>
-                                </button> 
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                
             </div>
             <div class="row text-center">
                 <div class="col-md-3">
                     <div class="square"><i class="fas fa-heartbeat"></i></i></div>
                     <div class="serv">
-                        <h5>Cung cấp một khẩu phần ăn hợp lý</h5>
-                        <p>Ăn uống hợp lý là một việc vô cùng quan trọng đối với mõi chúng ta. Nhưng hầu hết mọi người sẽ không biết ăn uống như thế nào là hợp lý.</p>
+                        <h5>Cung cấp thực đơn</h5>
+                        <p>Ăn uống hợp lý là một việc vô cùng quan trọng đối với mỗi chúng ta. Nhưng hầu hết mọi người sẽ không biết ăn uống như thế nào là hợp lý.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="serv">
                         <div class="square"><i class="fas fa-dumbbell"></i></div>
-                        <h5>Problem Solving</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <h5>Bổ sung kiến thức</h5>
+                        <p>Kiến thức về các loại thực phẩm là vô cùng cần thiết để xây dựng một thực đơn hợp lý và đảm bảo giá trị dinh dưỡng cũng như sức khỏe</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="square"><i class="fas fa-hamburger"></i></div>
                     <div class="serv">
-                        <h5>Best Domain</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <h5>Những lợi ích</h5>
+                        <p>Chúng tôi sẽ dựa vào những thông tin cơ thể để đưa ra cho bạn những thực đơn phù hợp nhất để cân đối lại khẩu phần của bạn.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="square"><i class="fas fa-user-shield"></i></div>
                     <div class="serv">
-                        <h5>Secure Website</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <h5>Đánh giá</h5>
+                        <p>Chúng tôi đã tìm hiểu những loại thực phẩm và thực đơn phù hợp nhất để cung cấp cho mọi người có cái nhìn toàn vẹn về lượng dinh dưỡng cũng như lượng calo hấp thụ</p>
                     </div>
                 </div>
             </div>
@@ -106,4 +91,3 @@
     </div>
     <script src="{% static '/js/service.js' %}"></script>
 {% endblock %}
-

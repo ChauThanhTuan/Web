@@ -3,13 +3,14 @@ from myapp import views
 
 urlpatterns = [
     path('', views.homeView, name='home'),
-    path('name', views.get_name, name='name'),
+    path('blog', views.get_search, name='blog'),
     path('result', views.result, name='result'),
+    path('propose', views.propose, name='propose'),
+    path('test', views.test_view, name='test'),
 
     #Register, Login, About, Service, Contact
     path('about', views.about_view, name='about'),
-    path('service', views.service_view, name='service'),
-    # path('search', views.search_view, name='search'),
+    path('service', views.get_info, name='service'),
     #path('contact', views.contact_view, name='contact'),
 
     #Begin menu
@@ -43,5 +44,7 @@ urlpatterns = [
     # weight gain
     path('menu/WeightGain', views.weight_gain, name='weightgain'),
     path('menu/WeightGain/WeightGain_paper', views.weight_gain_paper, name='weightgainpaper'),
+    path('menu/weight gain/WeightGain_Food', views.weight_gain_paper_1, name='weightgainpaper(1)'),
+    path('menu/weight gain/WeightGain', views.weight_gain_paper_2, name='weightgainpaper(2)'),
 ]
 

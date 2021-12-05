@@ -72,7 +72,7 @@ def loginUser(request):
             user = auth.authenticate(username=username, password=password)
 
             if user:
-                win32api.MessageBox(0, "hello", 'title')
+                #win32api.MessageBox(0, "hello", 'title')
                 if user.is_active == False:
                     return HttpResponse('Vui lòng xác nhận email để hoàn tất quá trình kích hoạt tài khoản')
                 else:

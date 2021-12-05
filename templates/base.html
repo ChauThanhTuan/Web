@@ -70,15 +70,132 @@
                 </li>
             </ul>
         </div>
-    </div>
+        </div>
         <div id="myOverlay" class="overlay">
             <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-            <div class="overlay-content">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
+            <div class="container my-5 w-100 mycontainer">
+                <div id="mylist" class="card p-3">
+                    <div class="row m-3">
+                        <div class="col-10">
+                            <input type="search" class="search form-control" placeholder="Search...">
+                        </div>
+                        <div class="col-2 tlink-right">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+                                    Sort
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="sort" data-sort="name"><a href="#" class="dropdown-item">By name</a></li>
+                                    <li class="sort" data-sort="description"><a href="#" class="dropdown-item">By description</a></li>
+                                    <li class="sort" data-sort="date"><a href="#" class="dropdown-item">By date</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list row"></div>
+                    <div class="d-flex justify-content-center mt-2">
+                        <ul class="pagination"></ul>
+                    </div>
+                </div>
+                <div style="display: none;">
+                    <div id="myitem" class="col-md-4" style="margin-bottom: 20px;">
+                        <div class="card mt-3 card-base" style="background: rgba(180, 247, 225, 0.41)">
+                            <div class="card-body card-body-base" style="margin-top: 0; font-weight: bold;">
+                                <div class="card-title card-title-base">
+                                    <p style="display: none;" class="link card-link-temp"></p>
+                                    <a href="" class="name card-link" onmousedown="getLink()" style="color: rgb(231, 53, 53)"></a>
+                                </div>
+                                <div class="card-description"><small class="description tlink-muted"></small></div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="date"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            </div>  
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+            <script>
+                const data = [
+                    {
+                        name: "CHẾ ĐỘ ĂN 1000 CALO MỖI NGÀY, THỰC ĐƠN ĂN KIÊNG 7 NGÀY TRONG TUẦN GIẢM CÂN HIỆU QUẢ",
+                        description: "Chế độ ăn uống 1000 calo tập trung vào bữa ăn nhỏ hơn và thường xuyên cũng như giảm lượng chất béo, đường và carbohydrate",
+                        link: "{% url 'paper_lg(1)' %}",
+                        date: "2021/11/12",
+                    },
+                    {
+                        name: "THỰC ĐƠN LOW CARB GIẢM CÂN TRONG 7 NGÀY, THƠM NGON ĐỦ CHẤT",
+                        description: "Chế độ ăn giảm cân Low Carb là một phương pháp ăn kiêng có vẻ \"dễ thở\" vì bạn không bị giới hạn lượng calo nạp vào.",
+                        link: "{% url 'paper_lg(2)' %}",
+                        date: "2021/11/1",
+                    },
+                    {
+                        name: "THỰC ĐƠN GIẢM CÂN 800 - 1500 CALO",
+                        description: "Thực đơn giảm cân cho nữ",
+                        link: "{% url 'paper_lg(3)' %}",
+                        date: "2021/10/3",
+                    },
+                    {
+                        name: "LƯỢNG CALO TRONG MỖI LOẠI THỰC PHẨM",
+                        description: "Calo không chỉ là mức đo năng lượng của thực phẩm. Khái niệm này còn được mở rộng hơn nữa khi chỉ mức độ cân bằng dinh dưỡng.",
+                        link: "{% url 'other_paper(1)' %}",
+                        date: "2020/1/4",
+                    },
+                    {
+                        name: "THỰC PHẨM GIÚP CẢI THIỆN CHIỀU CAO TRẺ EM",
+                        description: "Mặc dù chiều cao phụ thuộc phần lớn vào di truyền, nhưng việc bổ sung đủ chất dinh dưỡng trong chế độ ăn uống của bạn là hoàn toàn cần thiết",
+                        link: "{% url 'other_paper(2)' %}",
+                        date: "2021/4/5",
+                    },
+                    {
+                        name: "THỰC PHẨM TỐT CHO SỨC KHỎE GIÁ RẺ",
+                        description: "Nhiều người quan niệm rằng ăn những loại thực phẩm lành mạnh rất tốn kém và chúng ta phải chi nhiều tiền hơn cho một thực đơn \“healthy\”",
+                        link: "{% url 'other_paper(3)' %}",
+                        date: "2020/11/1",
+                    },
+                    {
+                        name: "NHỮNG LOẠI TRÁI CÂY CẦN BỔ SUNG VÀO CHẾ ĐỘ ĂN UỐNG",
+                        description: "Trái cây chứa nhiều vitamin, khoáng chất, chất xơ và các hợp chất thực vật được gọi là dinh dưỡng thực vật.",
+                        link: "{% url 'other_paper(4)' %}",
+                        date: "2021/5/7",
+                    },
+                    {
+                        name: "THỰC ĐƠN ĂN CHAY HÀNG NGÀY 7 NGÀY TRONG TUẦN ĐẦY ĐỦ CHẤT DINH DƯỠNG, ĂN CHAY MỘT CÁCH KHOA HỌC",
+                        description: "Ăn chay hay ăn mặn bạn vẫn phải đảm bảo dinh dưỡng trong khẩu phần thực đơn hàng ngày.",
+                        link: "{% url 'vegan_paper(1)' %}",
+                        date: "2021/7/8",
+                    },
+                    {
+                        name: "Thực đơn tăng cân cho người gầy kinh niên Tăng 3kg trong 1 tuần",
+                        description: "Bạn đang muốn tăng cân cấp tốc… Nhưng ăn mãi mà vẫn không mập không tăng cân được",
+                        link: "{% url 'weightgainpaper' %}",
+                        date: "2021/8/9",
+                    },
+                ]
+        
+                const options = {
+                    valueNames: ['name', 'description', 'link', 'date'],
+                    item: 'myitem',
+                    page: 3,
+                    pagination: true,
+                }
+        
+                new List('mylist', options, data);
+            </script>
+            
+            <script>
+                function getLink() {
+                    var linkTemps = document.querySelectorAll('.card-link-temp');
+                    var links = document.querySelectorAll('.card-link');
+                    var length = links.length;
+                    for (var i = 0; i < length; i++) {
+                        links[i].href = linkTemps[i].textContent;
+                    }
+                }
+            </script>
         </div>
     </nav>
     <!-- end navbar -->
