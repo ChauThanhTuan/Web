@@ -18,7 +18,7 @@ class Blog(models.Model):
     def get_description(self):
         return self.description
     def get_images(self):
-        return self.get_images
+        return self.images
     def get_link(self):
         return self.link
 
