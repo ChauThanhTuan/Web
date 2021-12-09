@@ -2,57 +2,59 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 import datetime
 
-from polls.models import Blog
+from polls.models import Blog, Diet
 
 # Test xem có lấy đươc thông tin hay k
 import win32api
 
-# Search feature
-search = ""
-def get_search(request):
-    global search
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        search = request.POST['search']
-        search = search.upper()
-
-        # Test xem có lấy đươc thông tin hay k
-        
-        # check whether it's valid:
-        if search:
-            # win32api.MessageBox(0, search, 'title')
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return HttpResponseRedirect('/result')
-        else:
-            win32api.MessageBox(0, "Giá trị không hợp lệ", 'error')
-            return HttpResponseRedirect(request.path)
-
-    return render(request, 'home.html')
-
-def result(request):
-    blog = Blog.objects.filter(title__contains=search).all()
-    return render(request, 'blog.html', {'blog': blog})
-
 # Chức năng đề xuất
+result = {}
 def get_info(request):
-    global search
+    global result
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        name = request.POST['name']
+        gender = request.POST['gender']
+        gender = gender.lower()
         age = int(request.POST['age'])
         high = int(request.POST['high']) / 100
         weight = int(request.POST['weight'])
         BMI = weight / (2 * high)
-        # Tính BMR cho nam
-        BMR = (66.5 + (13.75 * weight) + (5.003 * high) - (6.755 * age))
-        # Tính BMR cho nữ
-        # Test xem có lấy đươc thông tin hay k
-        # win32api.MessageBox(0, "BMI: " + str(BMI) + " BMR: " + str(BMR), 'BMI and BMR')
         
+        if gender == 'nam':
+            # Tính BMR cho nam
+            BMR = 66.5 + (13.75 * weight) + (5.003 * high) - (6.755 * age)
+        else:
+            # Tính BMR cho nữ
+            BMR = 55.1 + (9.563 * weight) + (1.850 * high) - (4.676 * age)
+
+        # Tính Calo trung bình
+        calo = BMR * 1.5
+
+        # Test xem có lấy đươc thông tin hay k
+        # win32api.MessageBox(0, str(calo), 'Calo')
+
+        type = 0
+        if calo < 600:
+            type = 1
+        elif calo > 600 and calo <= 800:
+            type = 2
+        elif calo > 800 and calo <= 1000:
+            type = 3
+        elif calo > 1000 and calo <= 1200:
+            type = 4
+        elif calo > 1200 and calo <= 1400:
+            type = 5
+        elif calo > 1400 and calo <= 1600:
+            type = 6
+        elif calo > 1600 and calo <= 1800:
+            type = 7
+        elif calo > 1800 and calo <= 2000:
+            type = 8
+        else:
+            type = 9
+
+        search = ""
         if BMI < 18.5:
             search = "weight_gain"
         elif BMI >= 25:
@@ -60,22 +62,17 @@ def get_info(request):
         else:
             search = "other"
 
+        result["search"] = search
+        result["type"] = type
+
         return HttpResponseRedirect('/propose')
-        # check whether it's valid:
-        # if search:
-        #     # win32api.MessageBox(0, search, 'title')
-        #     # process the data in form.cleaned_data as required
-        #     # ...
-        #     # redirect to a new URL:
-        #     return HttpResponseRedirect('/bmi')
-        # else:
-        #     win32api.MessageBox(0, "Giá trị không hợp lệ", 'error')
 
     return render(request, 'service.html')
 
 def propose(request):
-    blog = Blog.objects.filter(topic__contains=search).all()
-    return render(request, 'blog.html', {'blog': blog})
+    blog = Blog.objects.filter(topic__contains=result["search"]).all()
+    diet = Diet.objects.filter(type=result["type"]).all()
+    return render(request, 'blog.html', {"blog": blog, "diet": diet})
 
 #
 def homeView(request):
@@ -84,10 +81,6 @@ def homeView(request):
         'now': datetime.datetime.now()
     }
 )
-
-# Test
-def test_view(request):
-    return render(request, 'result.html')
 
 #About
 def about_view(request):

@@ -22,6 +22,17 @@ class Blog(models.Model):
     def get_link(self):
         return self.link
 
+class Diet(models.Model):
+    id = models.IntegerField(primary_key=True)
+    type = models.IntegerField()
+    name = models.CharField(max_length=50)
+    data = RichTextField()
+
+    def get_name(self):
+        return self.name
+    def get_data(self):
+        return self.data
+
 class Feedback(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)

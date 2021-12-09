@@ -3,10 +3,7 @@ from myapp import views
 
 urlpatterns = [
     path('', views.homeView, name='home'),
-    path('blog', views.get_search, name='blog'),
-    path('result', views.result, name='result'),
     path('propose', views.propose, name='propose'),
-    path('test', views.test_view, name='test'),
 
     #Register, Login, About, Service, Contact
     path('about', views.about_view, name='about'),

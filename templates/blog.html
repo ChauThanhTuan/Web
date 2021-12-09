@@ -38,6 +38,11 @@
         </button>
     </div> -->
     <h1 class="text-danger text-center"><strong>ĐỀ XUẤT</strong></h1>
+    {% for item in diet %}
+        <h1 class="text-danger"><strong>{{ item.name }}</strong></h1>
+        {{ item.data|safe }}
+    {% endfor %}
+    
     {% for item in blog %}
         <div class="card mb-3 suggest">
             <div class="row g-0">
