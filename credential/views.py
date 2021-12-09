@@ -79,7 +79,7 @@ def loginUser(request):
                     login(request, user)
                     return redirect('home')
             else:
-                messages.info(request, 'Tên đăng nhập hoặc mật khẩu không hợp lệ')
+                messages.info(request, 'Tên đăng nhập hoặc mật khẩu không hợp lệ hoặc tài khoàn chưa được kích hoạt')
 
         context = {'form': form}
         return render(request, 'login.html', context)
