@@ -17,7 +17,7 @@ def get_info(request):
         gender = request.POST['gender']
         gender = gender.lower()
         age = int(request.POST['age'])
-        high = int(request.POST['high']) / 100
+        high = int(request.POST['high']) 
         weight = int(request.POST['weight'])
         BMI = weight / (2 * high)
         
@@ -35,25 +35,26 @@ def get_info(request):
         # win32api.MessageBox(0, str(calo), 'Calo')
 
         type = 0
-        if calo < 600:
+        if calo < 800:
             type = 1
-        elif calo > 600 and calo <= 800:
+        elif calo > 800 and calo <= 1100:
             type = 2
-        elif calo > 800 and calo <= 1000:
+        elif calo > 1100 and calo <= 1400:
             type = 3
-        elif calo > 1000 and calo <= 1200:
+        elif calo > 1400 and calo <= 1700:
             type = 4
-        elif calo > 1200 and calo <= 1400:
+        elif calo > 1700 and calo <= 2000:
             type = 5
-        elif calo > 1400 and calo <= 1600:
+        elif calo > 2000 and calo <= 2300:
             type = 6
-        elif calo > 1600 and calo <= 1800:
+        elif calo > 2300 and calo <= 2600:
             type = 7
-        elif calo > 1800 and calo <= 2000:
+        elif calo > 2600 and calo <= 2900:
             type = 8
         else:
             type = 9
 
+        high = high / 100
         search = ""
         if BMI < 18.5:
             search = "weight_gain"

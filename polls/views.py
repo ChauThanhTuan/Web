@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
+from django.http import Http404
 
-from .models import Blog, Feedback
-from .forms import FeedbackForm
+from .models import Blog, Comment, Feedback
+from .forms import FeedbackForm, CommentForm
 
 # Test xem có lấy đươc thông tin hay k
 #import win32api
@@ -47,3 +48,30 @@ def handleFeedback(request):
         'form': form,
         'messageSent': messageSent,
     })
+
+
+def BlogDetailView(request, _id):
+    try:
+        data = Blog.objects.get(id=_id)
+        comments = Comment.objects.filter(blog=data)
+    except Blog.DoesNotExist:
+        raise Http404('Data does not exist')
+     
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = Comment(
+                name=form.cleaned_data['name'],
+                commentText=form.cleaned_data['commentText'],
+                blog=data)
+            comment.save()
+            return redirect(f'/menu/{_id}')
+    else:
+        form = CommentForm()
+ 
+    context = {
+            'data': data,
+            'form': form,
+            'comments': comments,
+        }
+    return render(request, 'detailview.html', context)

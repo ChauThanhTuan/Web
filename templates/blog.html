@@ -17,8 +17,8 @@
         <div class="carousel-inner">
             {% for item in blog %}
                 <div class="carousel-item ">
-                    <a class="d-block w-100" href="{{ item.get_link }}">{{ item.get_title }}</a> <br>
-                    {{ item.get_description }} <br>
+                    <a class="d-block w-100" href="{{ item.link }}">{{ item.title }}</a> <br>
+                    {{ item.description }} <br>
                     <br><br>
                 </div>
             {% endfor %}
@@ -47,12 +47,12 @@
         <div class="card mb-3 suggest">
             <div class="row g-0">
               <div class="col-md-4">
-                <img class="img-fluid w-50" src="{{ item.get_images }}" alt="...">
+                <img class="img-fluid w-50" src="{{ item.images }}" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><a href="{{ item.get_link }}" style="text-decoration: none;">{{ item.get_title }}</a> <br></h5>
-                    <p class="card-text">{{ item.get_description }}</p>
+                    <h5 class="card-title"><a href="{{ item.link }}" style="text-decoration: none;">{{ item.title }}</a> <br></h5>
+                    <p class="card-text">{{ item.description }}</p>
                 </div>
               </div>
             </div>
