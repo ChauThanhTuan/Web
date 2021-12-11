@@ -4,8 +4,7 @@ from django.core.mail import send_mail
 from .models import Blog, Feedback
 from .forms import FeedbackForm
 
-# Test xem có lấy đươc thông tin hay k
-#import win32api
+
 
 # Create your views here.
 # def blog(request):
@@ -28,9 +27,6 @@ def handleFeedback(request):
             fromEmail = data['fromEmail']
             message = data['message']
             subject = data['subject']
-
-            # Test xem có lấy đươc thông tin hay k
-            #win32api.MessageBox(0, fromEmail, 'title')
 
             fb = Feedback(id=Feedback.objects.count() + 1, name=name, email=fromEmail, subject=subject, message=message)
             fb.save()

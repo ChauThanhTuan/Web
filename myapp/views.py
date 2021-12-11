@@ -5,7 +5,7 @@ import datetime
 from polls.models import Blog, Diet
 
 # Test xem có lấy đươc thông tin hay k
-import win32api
+
 
 # Chức năng đề xuất
 result = {}
@@ -31,8 +31,7 @@ def get_info(request):
         # Tính Calo trung bình
         calo = BMR * 1.5
 
-        # Test xem có lấy đươc thông tin hay k
-        # win32api.MessageBox(0, str(calo), 'Calo')
+
 
         type = 0
         if calo < 600:
