@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static '/css/login.css' %}">
+  <link rel="icon" type="image/png" href="{% static '/images/icons/logo.ico' %}" />
 </head>
 
 <body>
@@ -13,8 +14,9 @@
 
       <form action="" method="POST" class="form" id="form-1">
         {% csrf_token %}
-        <h3 class="heading">Đăng nhập</h3>
-        <p class="desc">Group's name</p>
+          <h3 class="heading">Đăng nhập</h3>
+
+        <p class="desc"></p>
     
         <div class="spacer"></div>
 
@@ -58,9 +60,9 @@
         
         <div>
           Chưa có tài khoản?
-          <a href="{% url 'signup' %}">Đăng ký</a>
+          <a href="{% url 'signup' %}" style="font-size: 12px; text-decoration:none;">Đăng ký</a>
         </div>
-        <a href="{% url 'home' %}">Trang chủ</a>
+        <a href="{% url 'home' %}" style="font-size: 12px; text-decoration:none;">Trang chủ</a>
         
       </form>
 
@@ -69,6 +71,9 @@
       {% endfor %}
 
     </div>
+
+
+    
 
     <!-- Message -->
     <script>
@@ -102,8 +107,4 @@
       });
     </script>
 </body>
-<<<<<<< HEAD
-
-=======
->>>>>>> latest_newbackend
 </html>

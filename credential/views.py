@@ -60,29 +60,79 @@ def activate(request, uidb64, token):
         return HttpResponse('Liên kết kích hoạt tài khoản không hợp lệ!')
 
 # Login 
+# def loginUser(request):
+#     is_authenticated = False
+#     # if request.user.is_authenticated:
+#     #     return redirect('home')
+
+#     form = SignupForm()
+
+#     if request.method == 'POST':
+#         username = request.POST.get('username')
+#         password = request.POST.get('password1')
+#         user = auth.authenticate(username=username, password=password)
+
+#         if user:
+#                 #win32api.MessageBox(0, "hello", 'title')
+#             if user.is_active == False:
+#                 return HttpResponse('Vui lòng xác nhận email để hoàn tất quá trình kích hoạt tài khoản')
+#             else:
+#                 login(request, user)
+#                 context = {'form': form, 'is_authenticated': True}
+#                 return redirect('home', context)
+#         else:
+#             messages.info(request, 'Tên đăng nhập hoặc mật khẩu không hợp lệ hoặc tài khoàn chưa được kích hoạt')
+
+#         # context = {'form': form}
+#     context = {'form': form, 'is_authenticated': True}
+#     return render(request, 'login.html', context)
+
 def loginUser(request):
+
     if request.user.is_authenticated:
+
         return redirect('profile')
+
     else:
+
         form = SignupForm()
 
+
+
         if request.method == 'POST':
+
             username = request.POST.get('username')
+
             password = request.POST.get('password1')
+
             user = auth.authenticate(username=username, password=password)
 
+
+
             if user:
+
                 #win32api.MessageBox(0, "hello", 'title')
+
                 if user.is_active == False:
+
                     return HttpResponse('Vui lòng xác nhận email để hoàn tất quá trình kích hoạt tài khoản')
+
                 else:
+
                     login(request, user)
+
                     return redirect('home')
+
             else:
+
                 messages.info(request, 'Tên đăng nhập hoặc mật khẩu không hợp lệ hoặc tài khoàn chưa được kích hoạt')
 
+
+
         context = {'form': form}
+
         return render(request, 'login.html', context)
+
 
 #Logout
 def logoutUser(request):

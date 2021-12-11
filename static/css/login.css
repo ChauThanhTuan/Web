@@ -5,8 +5,7 @@
   }
   
   html {
-    color: #333;
-    background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://image.freepik.com/free-vector/flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vector-flat-cartoon-style_138676-1934.jpg);
     font-size: 62.5%;
     font-family: "Open Sans", sans-serif;
   }
@@ -23,18 +22,22 @@
   min-height: 100px;
   padding: 32px 32px;
   text-align: center;
-  background: white;
-  border-radius: 2px;
-  margin: 24px;
-  border: 2px solid;
+  background: rgba(216, 224, 231, 0.7);
+  /* border-radius: 2px; */
+  /* margin: 24px; */
+  /* border: 2px solid; */
+  box-shadow: 5px 10px 8px 10px #888888;
+  border-radius: 15px;
   border-color: black;
   align-self: center;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
   }
   
+
+
   .form .heading {
-  font-size: 2rem;
+  font-size: 3rem;
   }
   
   .form .desc {
@@ -55,9 +58,10 @@
   
   .form-label,
   .form-message {
-  text-align: left;
+  text-align: center;
   }
   
+
   .form-label {
   font-weight: 700;
   padding-bottom: 6px;
@@ -69,7 +73,7 @@
   height: 40px;
   padding: 8px 12px;
   border: 1px solid #b3b3b3;
-  border-radius: 3px;
+  border-radius: 4px;
   outline: none;
   font-size: 1.4rem;
   }
@@ -121,3 +125,4 @@
   #message {
   display: none;
   }
+  

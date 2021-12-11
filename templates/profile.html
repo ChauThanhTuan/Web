@@ -4,7 +4,7 @@
 {% block title %}Profile{% endblock %}
 {% block css %}{% static '/css/profile.css' %}{% endblock %}
 {% block content %}
-<div class="wrapper">
+<div class="wrapper mt-3">
     <div class="left">
         <img src="https://images.unsplash.com/photo-1632799442159-42bb99708e37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" alt="user" width="100">
         <h4>{{request.user}}</h4>
@@ -51,7 +51,9 @@
         </div>
 
         <div>
-            <a href="{% url 'logout' %}">Logout</a>
+            <a class="btn btn-info" href="{% url 'logout' %}"> 
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 </div>
