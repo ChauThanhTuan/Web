@@ -9,8 +9,13 @@
     <form method="post">
         {% csrf_token %}
         <h2> Comment Here</h2>
+        {% if user.is_authenticated %}
+        <b>{{ user.username }}:</b>
         {{form.as_p}}
         <input type ="submit" value="Comment">
+        {% else %}
+        <a href="{% url 'login' %}">Đăng nhập để bình luận</a>
+        {% endif %}
     </form>
     {%for comment in comments%}
     <p><strong>{{ comment.name }}:</strong> {{ comment.commentText }}</p>

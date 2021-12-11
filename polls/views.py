@@ -61,7 +61,7 @@ def BlogDetailView(request, _id):
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = Comment(
-                name=form.cleaned_data['name'],
+                name=request.user.username,
                 commentText=form.cleaned_data['commentText'],
                 blog=data)
             comment.save()

@@ -8,7 +8,6 @@ class FeedbackForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea)
 
 class CommentForm(forms.Form):
-    name = forms.CharField(max_length=50)
     commentText = forms.CharField(widget=forms.Textarea)
  
     def __str__(self):
